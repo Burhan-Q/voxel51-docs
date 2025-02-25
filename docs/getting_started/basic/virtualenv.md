@@ -1,5 +1,7 @@
 ---
-keywords: virtual environments, venv, best practice, version, packages, dependencies, version, python, dependency
+keywords: >-
+  virtual environments, venv, best practice, version, packages, dependencies,
+  version, python, dependency
 ---
 
 # Virtual Environment Setup [¶](\#virtual-environment-setup "Permalink to this headline")
@@ -50,7 +52,6 @@ create a virtual environment called `.venv` (you can choose any name, but .venv 
 
         1. Replace `.venv` with another name or `3.11` with another Python version to use.
         See [`uv` documentation](https://docs.astral.sh/uv/reference/cli/#uv-venv) for more details.
-
 
 Replace `python3` at the beginning of a command if your Python executable has a
 different name. This will create a new virtual environment in the `.venv` folder,

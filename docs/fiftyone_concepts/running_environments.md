@@ -1,5 +1,7 @@
 ---
-keywords: install, installation, setup, environments, configuration, remote, cloud, AWS, GCP, Azure, Docker, best practices
+keywords: >-
+  install, installation, setup, environments, configuration, remote, cloud, AWS,
+  GCP, Azure, Docker, best practices
 ---
 
 # FiftyOne Environments [¶](\#fiftyone-environments "Permalink to this headline")
@@ -37,7 +39,7 @@ import fiftyone as fo
 
 dataset = fo.Dataset("my-dataset")
 
-session = fo.launch_app(dataset, remote=True)  # (1)! 
+session = fo.launch_app(dataset, remote=True)  # (1)!
 
 ```
 
@@ -72,7 +74,7 @@ machine and launch a remote session:
 
     dataset = fo.load_dataset(...)
 
-    session = fo.launch_app(dataset, remote=True)  # (1)! 
+    session = fo.launch_app(dataset, remote=True)  # (1)!
 
     ```
 
@@ -122,7 +124,7 @@ fiftyone app connect --destination [<username>@]<hostname>
     You can customize the local/remote ports used when launching remote
     sessions in order to connect/service multiple remote sessions
     simultaneously.
-        
+
     If you choose a custom port `XXXX` on the remote machine, add a `--port XXXX`
     flag.
 
@@ -135,7 +137,7 @@ fiftyone app connect --destination [<username>@]<hostname>
 
     If you would like to use a custom local port, add a `--local-port YYYY` flag
     to the above command.
-    
+
 
     ```{ .shell .annotate }
     fiftyone app connect --destination [<username>@]<hostname> --local-port 25151  # (1)!
@@ -587,7 +589,7 @@ and [install FiftyOne](../getting_started/basic/install.md#installing-fiftyone) 
 
         ```shell
         uv pip install fiftyone
-        
+
         ```
 
 !!! info ""
@@ -646,7 +648,7 @@ and [install FiftyOne](../getting_started/basic/install.md#installing-fiftyone) 
 
         ```shell
         uv pip install fiftyone
-        
+
         ```
 
 !!! info ""
@@ -703,7 +705,7 @@ and [install FiftyOne](../getting_started/basic/install.md#installing-fiftyone) 
 
         ```shell
         uv pip install fiftyone
-        
+
         ```
 
 !!! info ""

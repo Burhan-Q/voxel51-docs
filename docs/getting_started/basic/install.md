@@ -1,5 +1,7 @@
 ---
-keywords: install, installation, setup, get started, configuration, python, start, quickstart, upgrade, downgrade, migrate
+keywords: >-
+  install, installation, setup, get started, configuration, python, start,
+  quickstart, upgrade, downgrade, migrate
 ---
 
 # FiftyOne Installation [¶](\#fiftyone-installation "Permalink to this headline")
@@ -35,7 +37,7 @@ are using, then run:
         pip install fiftyone
 
         ```
-    
+
     === "uv"
 
         ```shell
