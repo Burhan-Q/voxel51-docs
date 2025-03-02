@@ -2,6 +2,7 @@
 keywords: >-
   virtual environments, venv, best practice, version, packages, dependencies,
   version, python, dependency
+
 ---
 
 # Virtual Environment Setup [¶](\#virtual-environment-setup "Permalink to this headline")
