@@ -611,7 +611,7 @@ how to validate that a run is valid and how to cleanup after a run.</p>
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id572">
+          <table class="children sortable" id="id576">
   
   
   <tr class="classmethod">
@@ -648,7 +648,7 @@ how to validate that a run is valid and how to cleanup after a run.</p>
     
     <td>Class Method</td>
     <td><code><a href="#load_run_view" class="internal-link" title="fiftyone.core.runs.BaseRun.load_run_view">load<wbr></wbr>_run<wbr></wbr>_view</a></code></td>
-    <td>Loads the <code><a href="fiftyone.core.view.DatasetView.html" class="internal-link">fiftyone.core.view.DatasetView</a></code> on which the specified run was performed.</td>
+    <td>Loads the view on which the specified run was performed.</td>
   </tr><tr class="classmethod">
     
     <td>Class Method</td>
@@ -760,7 +760,7 @@ how to validate that a run is valid and how to cleanup after a run.</p>
             <p class="inheritedFrom">
               Inherited from <code><a href="fiftyone.core.config.Configurable.html" class="internal-link" title="fiftyone.core.config.Configurable">Configurable</a></code>:
             </p>
-            <table class="children sortable" id="id573">
+            <table class="children sortable" id="id577">
   
   
   <tr class="basemethod">
@@ -794,7 +794,7 @@ how to validate that a run is valid and how to cleanup after a run.</p>
     
     @<a href="https://docs.python.org/3/library/functions.html#classmethod" class="intersphinx-link">classmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">delete_run</span><span class="function-signature">(cls, samples, key, cleanup=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L797">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L807">
       
       (source)
     </a>
@@ -823,7 +823,7 @@ collection.</p><table class="fieldTable"><tr class="fieldStart"><td class="field
     
     @<a href="https://docs.python.org/3/library/functions.html#classmethod" class="intersphinx-link">classmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">delete_runs</span><span class="function-signature">(cls, samples, cleanup=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L847">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L857">
       
       (source)
     </a>
@@ -878,7 +878,7 @@ collection.</p><table class="fieldTable"><tr class="fieldStart"><td class="field
     
     @<a href="https://docs.python.org/3/library/functions.html#classmethod" class="intersphinx-link">classmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">has_cached_run_results</span><span class="function-signature">(cls, samples, key)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L732">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L739">
       
       (source)
     </a>
@@ -940,7 +940,7 @@ fully-qualified class name string</li>
     
     @<a href="https://docs.python.org/3/library/functions.html#classmethod" class="intersphinx-link">classmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">load_run_results</span><span class="function-signature">(cls, samples, key, cache=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, load_view=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, **kwargs)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L659">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L666">
       
       (source)
     </a>
@@ -970,7 +970,7 @@ collection.</p><table class="fieldTable"><tr class="fieldStart"><td class="field
     
     @<a href="https://docs.python.org/3/library/functions.html#classmethod" class="intersphinx-link">classmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">load_run_view</span><span class="function-signature">(cls, samples, key, select_fields=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L748">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L755">
       
       (source)
     </a>
@@ -982,9 +982,8 @@ collection.</p><table class="fieldTable"><tr class="fieldStart"><td class="field
   </div>
   <div class="docstring functionBody">
     
-    <div><p>Loads the <code><a href="fiftyone.core.view.DatasetView.html" class="internal-link">fiftyone.core.view.DatasetView</a></code> on which the
-specified run was performed.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">samples</span></td><td class="fieldArgDesc">a <code><a href="fiftyone.core.collections.SampleCollection.html" class="internal-link">fiftyone.core.collections.SampleCollection</a></code></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">key</span></td><td class="fieldArgDesc">a run key</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">select<wbr></wbr>_fields:</span><code><a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a></code></td><td class="fieldArgDesc">whether to exclude fields involved in other
-runs of the same type</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">a <code><a href="fiftyone.core.view.DatasetView.html" class="internal-link">fiftyone.core.view.DatasetView</a></code></td></tr></table></div>
+    <div><p>Loads the view on which the specified run was performed.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">samples</span></td><td class="fieldArgDesc">a <code><a href="fiftyone.core.collections.SampleCollection.html" class="internal-link">fiftyone.core.collections.SampleCollection</a></code></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">key</span></td><td class="fieldArgDesc">a run key</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">select<wbr></wbr>_fields:</span><code><a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a></code></td><td class="fieldArgDesc">whether to exclude fields involved in other
+runs of the same type</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">a <code><a href="fiftyone.core.collections.SampleCollection.html" class="internal-link">fiftyone.core.collections.SampleCollection</a></code></td></tr></table></div>
   </div>
 </div><div class="baseclassmethod">
   
@@ -1055,7 +1054,7 @@ same key</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">clean
     
     @<a href="https://docs.python.org/3/library/functions.html#classmethod" class="intersphinx-link">classmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">save_run_results</span><span class="function-signature">(cls, samples, key, run_results, overwrite=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, cache=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L614">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L621">
       
       (source)
     </a>
@@ -1083,7 +1082,7 @@ same key</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">cache
     
     @<a href="https://docs.python.org/3/library/functions.html#classmethod" class="intersphinx-link">classmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">update_run_config</span><span class="function-signature">(cls, samples, key, config)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L597">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L604">
       
       (source)
     </a>
@@ -1344,7 +1343,7 @@ the same type</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">
     
     @<a href="https://docs.python.org/3/library/functions.html#classmethod" class="intersphinx-link">classmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">_get_run_doc</span><span class="function-signature">(cls, samples, key)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L877">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L887">
       
       (source)
     </a>
@@ -1371,7 +1370,7 @@ the same type</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">
     
     @<a href="https://docs.python.org/3/library/functions.html#classmethod" class="intersphinx-link">classmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">_get_run_docs</span><span class="function-signature">(cls, samples)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L859">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L869">
       
       (source)
     </a>
@@ -1398,7 +1397,7 @@ the same type</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">
     
     @<a href="https://docs.python.org/3/library/functions.html#classmethod" class="intersphinx-link">classmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">_get_run_fields</span><span class="function-signature">(cls, samples, key)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L888">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/runs.py#L898">
       
       (source)
     </a>
@@ -1590,7 +1589,7 @@ exists.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName
   <div class="container-fluid">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/voxel51/" class="projecthome">FiftyOne</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.11.2 at 2025-03-19 23:40:43.
+    24.11.2 at 2025-03-22 02:44:25.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

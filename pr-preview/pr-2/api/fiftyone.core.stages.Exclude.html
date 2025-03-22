@@ -247,6 +247,16 @@
         
 
         
+            <div class="itemName"><code><a href="fiftyone.core.stages.ViewStage.html#get_group_media_types" class="internal-link" title="fiftyone.core.stages.ViewStage.get_group_media_types">get<wbr></wbr>_group<wbr></wbr>_media<wbr></wbr>_types</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="fiftyone.core.stages.ViewStage.html#get_media_type" class="internal-link" title="fiftyone.core.stages.ViewStage.get_media_type">get<wbr></wbr>_media<wbr></wbr>_type</a></code>
             </div>
         
@@ -359,6 +369,16 @@
         
 
         
+            <div class="itemName"><code><a href="fiftyone.core.stages.ViewStage.html#flattens_groups" class="internal-link" title="fiftyone.core.stages.ViewStage.flattens_groups">flattens<wbr></wbr>_groups</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="fiftyone.core.stages.ViewStage.html#has_view" class="internal-link" title="fiftyone.core.stages.ViewStage.has_view">has<wbr></wbr>_view</a></code>
             </div>
         
@@ -460,6 +480,16 @@
 
         
             <div class="itemName"><code><a href="fiftyone.core.stages.ExcludeGroups.html" class="internal-link" title="fiftyone.core.stages.ExcludeGroups"><wbr></wbr>Exclude<wbr></wbr>Groups</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.stages.ExcludeGroupSlices.html" class="internal-link" title="fiftyone.core.stages.ExcludeGroupSlices"><wbr></wbr>Exclude<wbr></wbr>Group<wbr></wbr>Slices</a></code>
             </div>
         
 
@@ -580,6 +610,16 @@
 
         
             <div class="itemName"><code><a href="fiftyone.core.stages.MapLabels.html" class="internal-link" title="fiftyone.core.stages.MapLabels"><wbr></wbr>Map<wbr></wbr>Labels</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.stages.MapValues.html" class="internal-link" title="fiftyone.core.stages.MapValues"><wbr></wbr>Map<wbr></wbr>Values</a></code>
             </div>
         
 
@@ -1414,7 +1454,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Exclude</span>(<a href="fiftyone.core.stages.ViewStage.html" class="internal-link" title="fiftyone.core.stages.ViewStage">ViewStage</a>): <a href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L483" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fiftyone.core.stages.Exclude.__init__">Exclude(sample_ids)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Exclude</span>(<a href="fiftyone.core.stages.ViewStage.html" class="internal-link" title="fiftyone.core.stages.ViewStage">ViewStage</a>): <a href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L511" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fiftyone.core.stages.Exclude.__init__">Exclude(sample_ids)</a></code></p>
           <p><a href="classIndex.html#fiftyone.core.stages.Exclude">View In Hierarchy</a></p>
         </div>
 
@@ -1463,7 +1503,7 @@ view = dataset.add_stage(stage)
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id663">
+          <table class="children sortable" id="id667">
   
   
   <tr class="method">
@@ -1502,7 +1542,7 @@ view = dataset.add_stage(stage)
             <p class="inheritedFrom">
               Inherited from <code><a href="fiftyone.core.stages.ViewStage.html" class="internal-link" title="fiftyone.core.stages.ViewStage">ViewStage</a></code>:
             </p>
-            <table class="children sortable" id="id664">
+            <table class="children sortable" id="id668">
   
   
   <tr class="basemethod">
@@ -1543,6 +1583,11 @@ view = dataset.add_stage(stage)
   </tr><tr class="basemethod">
     
     <td>Method</td>
+    <td><code><a href="fiftyone.core.stages.ViewStage.html#get_group_media_types" class="internal-link" title="fiftyone.core.stages.ViewStage.get_group_media_types">get<wbr></wbr>_group<wbr></wbr>_media<wbr></wbr>_types</a></code></td>
+    <td>Returns the group media types outputted by this stage, if any, when applied to the given collection, if and only if they are different from the input collection.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
     <td><code><a href="fiftyone.core.stages.ViewStage.html#get_media_type" class="internal-link" title="fiftyone.core.stages.ViewStage.get_media_type">get<wbr></wbr>_media<wbr></wbr>_type</a></code></td>
     <td>Returns the media type outputted by this stage when applied to the given collection, if and only if it is different from the input type.</td>
   </tr><tr class="basemethod">
@@ -1560,6 +1605,11 @@ view = dataset.add_stage(stage)
     <td>Method</td>
     <td><code><a href="fiftyone.core.stages.ViewStage.html#validate" class="internal-link" title="fiftyone.core.stages.ViewStage.validate">validate</a></code></td>
     <td>Validates that the stage can be applied to the given collection.</td>
+  </tr><tr class="baseproperty">
+    
+    <td>Property</td>
+    <td><code><a href="fiftyone.core.stages.ViewStage.html#flattens_groups" class="internal-link" title="fiftyone.core.stages.ViewStage.flattens_groups">flattens<wbr></wbr>_groups</a></code></td>
+    <td>Whether this stage flattens groups into a non-grouped collection.</td>
   </tr><tr class="baseproperty">
     
     <td>Property</td>
@@ -1616,7 +1666,7 @@ view = dataset.add_stage(stage)
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, sample_ids)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L527">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L555">
       
       (source)
     </a>
@@ -1643,7 +1693,7 @@ view = dataset.add_stage(stage)
     
     
     <span class="py-keyword">def</span> <span class="py-defname">to_mongo</span><span class="function-signature">(self, _)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L543">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L571">
       
       (source)
     </a>
@@ -1673,7 +1723,7 @@ the stage is being applied</td></tr><tr class="fieldStart"><td class="fieldName"
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">sample_ids</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L538">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L566">
       
       (source)
     </a>
@@ -1701,7 +1751,7 @@ the stage is being applied</td></tr><tr class="fieldStart"><td class="fieldName"
     
     @<a href="https://docs.python.org/3/library/functions.html#classmethod" class="intersphinx-link">classmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">_params</span><span class="function-signature">(cls)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L550">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L578">
       
       (source)
     </a>
@@ -1729,7 +1779,7 @@ parameters.</p><table class="fieldTable"><tr class="fieldStart"><td class="field
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_kwargs</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L547">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L575">
       
       (source)
     </a>
@@ -1756,7 +1806,7 @@ of this stage instance.</p><table class="fieldTable"><tr class="fieldStart"><td 
   <div class="functionHeader">
     
     <span class="py-defname">_sample_ids</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L536">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L564">
       
       (source)
     </a>
@@ -1783,7 +1833,7 @@ of this stage instance.</p><table class="fieldTable"><tr class="fieldStart"><td 
   <div class="container-fluid">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/voxel51/" class="projecthome">FiftyOne</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.11.2 at 2025-03-19 23:40:43.
+    24.11.2 at 2025-03-22 02:44:25.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

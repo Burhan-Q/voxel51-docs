@@ -231,6 +231,26 @@
         
 
         
+            <div class="itemName"><code><a href="#set_log_size" class="internal-link" title="fiftyone.factory.repos.delegated_operation.DelegatedOperationRepo.set_log_size">set<wbr></wbr>_log<wbr></wbr>_size</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_log_upload_error" class="internal-link" title="fiftyone.factory.repos.delegated_operation.DelegatedOperationRepo.set_log_upload_error">set<wbr></wbr>_log<wbr></wbr>_upload<wbr></wbr>_error</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#set_pinned" class="internal-link" title="fiftyone.factory.repos.delegated_operation.DelegatedOperationRepo.set_pinned">set<wbr></wbr>_pinned</a></code>
             </div>
         
@@ -371,7 +391,7 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id895">
+          <table class="children sortable" id="id910">
   
   
   <tr class="method">
@@ -427,6 +447,16 @@
   </tr><tr class="method">
     
     <td>Method</td>
+    <td><code><a href="#set_log_size" class="internal-link" title="fiftyone.factory.repos.delegated_operation.DelegatedOperationRepo.set_log_size">set<wbr></wbr>_log<wbr></wbr>_size</a></code></td>
+    <td>Sets the log size for the delegated operation.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_log_upload_error" class="internal-link" title="fiftyone.factory.repos.delegated_operation.DelegatedOperationRepo.set_log_upload_error">set<wbr></wbr>_log<wbr></wbr>_upload<wbr></wbr>_error</a></code></td>
+    <td>Sets the log upload error for the delegated operation.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
     <td><code><a href="#set_pinned" class="internal-link" title="fiftyone.factory.repos.delegated_operation.DelegatedOperationRepo.set_pinned">set<wbr></wbr>_pinned</a></code></td>
     <td>Sets the pinned flag on / off.</td>
   </tr><tr class="method">
@@ -460,7 +490,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">count</span><span class="function-signature">(self, filters: <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, search: <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>) -&gt; <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code></span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L124">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L139">
       
       (source)
     </a>
@@ -487,7 +517,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">delete_for_dataset</span><span class="function-signature">(self, dataset_id: <code>ObjectId</code>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L104">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L105">
       
       (source)
     </a>
@@ -514,7 +544,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">delete_operation</span><span class="function-signature">(self, _id: <code>ObjectId</code>) -&gt; <code>DelegatedOperationDocument</code></span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L100">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L101">
       
       (source)
     </a>
@@ -541,7 +571,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">get</span><span class="function-signature">(self, _id: <code>ObjectId</code>) -&gt; <code>DelegatedOperationDocument</code></span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L120">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L135">
       
       (source)
     </a>
@@ -568,7 +598,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">get_queued_operations</span><span class="function-signature">(self, operator: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, dataset_name=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr>DelegatedOperationDocument]</code></span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L61">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L62">
       
       (source)
     </a>
@@ -595,7 +625,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">get_running_operations</span><span class="function-signature">(self, operator: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, dataset_name=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr>DelegatedOperationDocument]</code></span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L77">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L78">
       
       (source)
     </a>
@@ -622,7 +652,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">get_scheduled_operations</span><span class="function-signature">(self, operator: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, dataset_name=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr>DelegatedOperationDocument]</code></span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L69">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L70">
       
       (source)
     </a>
@@ -649,7 +679,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">list_operations</span><span class="function-signature">(self, operator: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, dataset_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, dataset_id: <code>ObjectId</code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, run_state: <code><a href="fiftyone.operators.executor.ExecutionRunState.html" class="internal-link" title="fiftyone.operators.executor.ExecutionRunState">ExecutionRunState</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, delegation_target: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, pinned: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, paging: <code><a href="fiftyone.factory.DelegatedOperationPagingParams.html" class="internal-link" title="fiftyone.factory.DelegatedOperationPagingParams">DelegatedOperationPagingParams</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, search: <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, **kwargs: <code><a href="https://docs.python.org/3/library/typing.html#typing.Any" class="intersphinx-link">Any</a></code>) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr>DelegatedOperationDocument]</code></span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L85">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L86">
       
       (source)
     </a>
@@ -703,7 +733,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">set_label</span><span class="function-signature">(self, _id: <code>ObjectId</code>, label: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>) -&gt; <code>DelegatedOperationDocument</code></span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L114">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L115">
       
       (source)
     </a>
@@ -720,6 +750,60 @@
 </div><div class="basemethod">
   
   
+  <a name="fiftyone.factory.repos.delegated_operation.DelegatedOperationRepo.set_log_size">
+    
+  </a>
+  <a name="set_log_size">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_log_size</span><span class="function-signature">(self, _id: <code>ObjectId</code>, log_size: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>) -&gt; <code>DelegatedOperationDocument</code></span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L129">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#set_log_size" title="fiftyone.factory.repos.delegated_operation.DelegatedOperationRepo.set_log_size">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="fiftyone.factory.repos.delegated_operation.MongoDelegatedOperationRepo.html" class="internal-link">fiftyone.factory.repos.delegated_operation.MongoDelegatedOperationRepo</a></code></div>
+    <div><p>Sets the log size for the delegated operation.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.factory.repos.delegated_operation.DelegatedOperationRepo.set_log_upload_error">
+    
+  </a>
+  <a name="set_log_upload_error">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_log_upload_error</span><span class="function-signature">(self, _id: <code>ObjectId</code>, log_upload_error: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>) -&gt; <code>DelegatedOperationDocument</code></span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L121">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#set_log_upload_error" title="fiftyone.factory.repos.delegated_operation.DelegatedOperationRepo.set_log_upload_error">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="fiftyone.factory.repos.delegated_operation.MongoDelegatedOperationRepo.html" class="internal-link">fiftyone.factory.repos.delegated_operation.MongoDelegatedOperationRepo</a></code></div>
+    <div><p>Sets the log upload error for the delegated operation.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
   <a name="fiftyone.factory.repos.delegated_operation.DelegatedOperationRepo.set_pinned">
     
   </a>
@@ -730,7 +814,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">set_pinned</span><span class="function-signature">(self, _id: <code>ObjectId</code>, pinned: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> = <a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>) -&gt; <code>DelegatedOperationDocument</code></span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L108">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L109">
       
       (source)
     </a>
@@ -757,7 +841,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">update_progress</span><span class="function-signature">(self, _id: <code>ObjectId</code>, progress: <code><a href="fiftyone.operators.executor.ExecutionProgress.html" class="internal-link" title="fiftyone.operators.executor.ExecutionProgress">ExecutionProgress</a></code>) -&gt; <code>DelegatedOperationDocument</code></span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L53">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L54">
       
       (source)
     </a>
@@ -783,7 +867,7 @@
   <div class="functionHeader">
     
     
-    <span class="py-keyword">def</span> <span class="py-defname">update_run_state</span><span class="function-signature">(self, _id: <code>ObjectId</code>, run_state: <code><a href="fiftyone.operators.executor.ExecutionRunState.html" class="internal-link" title="fiftyone.operators.executor.ExecutionRunState">ExecutionRunState</a></code>, result: <code><a href="fiftyone.operators.executor.ExecutionResult.html" class="internal-link" title="fiftyone.operators.executor.ExecutionResult">ExecutionResult</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, run_link: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, progress: <code><a href="fiftyone.operators.executor.ExecutionProgress.html" class="internal-link" title="fiftyone.operators.executor.ExecutionProgress">ExecutionProgress</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, required_state: <code><a href="fiftyone.operators.executor.ExecutionRunState.html" class="internal-link" title="fiftyone.operators.executor.ExecutionRunState">ExecutionRunState</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>) -&gt; <code>DelegatedOperationDocument</code></span>:
+    <span class="py-keyword">def</span> <span class="py-defname">update_run_state</span><span class="function-signature">(self, _id: <code>ObjectId</code>, run_state: <code><a href="fiftyone.operators.executor.ExecutionRunState.html" class="internal-link" title="fiftyone.operators.executor.ExecutionRunState">ExecutionRunState</a></code>, result: <code><a href="fiftyone.operators.executor.ExecutionResult.html" class="internal-link" title="fiftyone.operators.executor.ExecutionResult">ExecutionResult</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, run_link: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, log_path: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, progress: <code><a href="fiftyone.operators.executor.ExecutionProgress.html" class="internal-link" title="fiftyone.operators.executor.ExecutionProgress">ExecutionProgress</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, required_state: <code><a href="fiftyone.operators.executor.ExecutionRunState.html" class="internal-link" title="fiftyone.operators.executor.ExecutionRunState">ExecutionRunState</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>) -&gt; <code>DelegatedOperationDocument</code></span>:
     <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/factory/repos/delegated_operation.py#L41">
       
       (source)
@@ -810,7 +894,7 @@
   <div class="container-fluid">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/voxel51/" class="projecthome">FiftyOne</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.11.2 at 2025-03-19 23:40:43.
+    24.11.2 at 2025-03-22 02:44:25.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

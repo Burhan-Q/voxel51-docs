@@ -141,6 +141,16 @@
         
 
         
+            <div class="itemName"><code><a href="#get_group_media_types" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices.get_group_media_types">get<wbr></wbr>_group<wbr></wbr>_media<wbr></wbr>_types</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#get_media_type" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices.get_media_type">get<wbr></wbr>_media<wbr></wbr>_type</a></code>
             </div>
         
@@ -172,16 +182,6 @@
 
         
             <div class="itemName"><code><a href="#_params" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices._params">_params</a></code>
-            </div>
-        
-
-    </li><li class="private">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="#_get_group_media_types" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices._get_group_media_types">_get<wbr></wbr>_group<wbr></wbr>_media<wbr></wbr>_types</a></code>
             </div>
         
 
@@ -373,6 +373,26 @@
         
 
         
+            <div class="itemName"><code><a href="#flat" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices.flat">flat</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#flattens_groups" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices.flattens_groups">flattens<wbr></wbr>_groups</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#media_type" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices.media_type">media<wbr></wbr>_type</a></code>
             </div>
         
@@ -394,6 +414,16 @@
 
         
             <div class="itemName"><code><a href="#_allow_mixed" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices._allow_mixed">_allow<wbr></wbr>_mixed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_flat" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices._flat">_flat</a></code>
             </div>
         
 
@@ -549,6 +579,16 @@
         
 
         
+            <div class="itemName"><code><a href="fiftyone.core.stages.ExcludeGroupSlices.html" class="internal-link" title="fiftyone.core.stages.ExcludeGroupSlices"><wbr></wbr>Exclude<wbr></wbr>Group<wbr></wbr>Slices</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="fiftyone.core.stages.ExcludeLabels.html" class="internal-link" title="fiftyone.core.stages.ExcludeLabels"><wbr></wbr>Exclude<wbr></wbr>Labels</a></code>
             </div>
         
@@ -660,6 +700,16 @@
 
         
             <div class="itemName"><code><a href="fiftyone.core.stages.MapLabels.html" class="internal-link" title="fiftyone.core.stages.MapLabels"><wbr></wbr>Map<wbr></wbr>Labels</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.stages.MapValues.html" class="internal-link" title="fiftyone.core.stages.MapValues"><wbr></wbr>Map<wbr></wbr>Values</a></code>
             </div>
         
 
@@ -1494,19 +1544,21 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">SelectGroupSlices</span>(<a href="fiftyone.core.stages.ViewStage.html" class="internal-link" title="fiftyone.core.stages.ViewStage">ViewStage</a>): <a href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4589" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices.__init__">SelectGroupSlices(slices, media_type, _allow_mixed, _force_mixed)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">SelectGroupSlices</span>(<a href="fiftyone.core.stages.ViewStage.html" class="internal-link" title="fiftyone.core.stages.ViewStage">ViewStage</a>): <a href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4752" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices.__init__">SelectGroupSlices(slices, media_type, flat, _allow_mixed, _force_mixed)</a></code></p>
           <p><a href="classIndex.html#fiftyone.core.stages.SelectGroupSlices">View In Hierarchy</a></p>
         </div>
 
         <div class="moduleDocstring">
-          <div><p>Selects the samples in a group collection from the given slice(s).</p>
-<p>The returned view is a flattened non-grouped view containing only the
-slice(s) of interest.</p>
+          <div><p>Selects the specified group slice(s) from a grouped collection.</p>
+<p>When <tt class="rst-docutils rst-literal"><span class="pre">flat==True</span></tt>, the returned view is a flattened non-grouped view
+containing the samples from the slice(s) of interest.</p>
+<p>When <tt class="rst-docutils rst-literal">flat=False</tt>, the returned view is a grouped collection containing
+only the slice(s) of interest.</p>
 <div class="rst-admonition rst-note">
 <p class="rst-admonition-title rst-first">Note</p>
-<p class="rst-last">This stage performs a <tt class="rst-docutils rst-literal">$lookup</tt> that pulls the requested slice(s) for
-each sample in the input collection from the source dataset. As a
-result, this stage always emits <em>unfiltered samples</em>.</p>
+<p class="rst-last">When <tt class="rst-docutils rst-literal">flat=True</tt>, this stage performs a <tt class="rst-docutils rst-literal">$lookup</tt> that pulls the
+requested slice(s) for each sample in the input collection from the
+source dataset. As a result, the stage emits <em>unfiltered samples</em>.</p>
 </div>
 <p>Examples:</p>
 <pre class="rst-literal-block">
@@ -1562,6 +1614,13 @@ stage = fo.SelectGroupSlices(["left", "right"])
 view = dataset.add_stage(stage)
 
 #
+# Select only the "left" and "right" group slices
+#
+
+stage = fo.SelectGroupSlices(["left", "right"], flat=False)
+view = dataset.add_stage(stage)
+
+#
 # Retrieve all image samples
 #
 
@@ -1570,11 +1629,13 @@ view = dataset.add_stage(stage)
 </pre>
 <table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">slices</span></td><td class="fieldArgDesc">a group slice or iterable of group slices to select.
 If neither argument is provided, a flattened list of all samples is
-returned</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">media<wbr></wbr>_type</span></td><td class="fieldArgDesc">a media type whose slice(s) to select</td></tr></table></div>
+returned</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">media<wbr></wbr>_type</span></td><td class="fieldArgDesc">a media type or iterable of media types whose
+slice(s) to select</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">flat</span></td><td class="fieldArgDesc">whether to return a flattened collection (True) or a
+grouped collection (False)</td></tr></table></div>
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id705">
+          <table class="children sortable" id="id711">
   
   
   <tr class="method">
@@ -1582,6 +1643,11 @@ returned</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">media
     <td>Method</td>
     <td><code><a href="#__init__" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices.__init__">__init__</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_group_media_types" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices.get_group_media_types">get<wbr></wbr>_group<wbr></wbr>_media<wbr></wbr>_types</a></code></td>
+    <td>Returns the group media types outputted by this stage, if any, when applied to the given collection, if and only if they are different from the input collection.</td>
   </tr><tr class="method">
     
     <td>Method</td>
@@ -1600,8 +1666,18 @@ returned</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">media
   </tr><tr class="property">
     
     <td>Property</td>
+    <td><code><a href="#flat" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices.flat">flat</a></code></td>
+    <td>Whether to generate a flattened collection.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#flattens_groups" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices.flattens_groups">flattens<wbr></wbr>_groups</a></code></td>
+    <td>Whether this stage flattens groups into a non-grouped collection.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
     <td><code><a href="#media_type" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices.media_type">media<wbr></wbr>_type</a></code></td>
-    <td>The media type whose slices to select.</td>
+    <td>The media type(s) whose slices to select.</td>
   </tr><tr class="property">
     
     <td>Property</td>
@@ -1612,11 +1688,6 @@ returned</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">media
     <td>Class Method</td>
     <td><code><a href="#_params" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices._params">_params</a></code></td>
     <td>Returns a list of JSON dicts describing the stage's supported parameters.</td>
-  </tr><tr class="method private">
-    
-    <td>Method</td>
-    <td><code><a href="#_get_group_media_types" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices._get_group_media_types">_get<wbr></wbr>_group<wbr></wbr>_media<wbr></wbr>_types</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="method private">
     
     <td>Method</td>
@@ -1645,6 +1716,11 @@ returned</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">media
   </tr><tr class="instancevariable private">
     
     <td>Instance Variable</td>
+    <td><code><a href="#_flat" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices._flat">_flat</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
     <td><code><a href="#_force_mixed" class="internal-link" title="fiftyone.core.stages.SelectGroupSlices._force_mixed">_force<wbr></wbr>_mixed</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="instancevariable private">
@@ -1663,7 +1739,7 @@ returned</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">media
             <p class="inheritedFrom">
               Inherited from <code><a href="fiftyone.core.stages.ViewStage.html" class="internal-link" title="fiftyone.core.stages.ViewStage">ViewStage</a></code>:
             </p>
-            <table class="children sortable" id="id706">
+            <table class="children sortable" id="id712">
   
   
   <tr class="basemethod">
@@ -1766,8 +1842,8 @@ returned</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">media
   <div class="functionHeader">
     
     
-    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, slices=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, media_type=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, _allow_mixed=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, _force_mixed=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4668">
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, slices=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, media_type=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, flat=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, _allow_mixed=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, _force_mixed=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4844">
       
       (source)
     </a>
@@ -1784,6 +1860,38 @@ returned</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">media
 </div><div class="basemethod">
   
   
+  <a name="fiftyone.core.stages.SelectGroupSlices.get_group_media_types">
+    
+  </a>
+  <a name="get_group_media_types">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_group_media_types</span><span class="function-signature">(self, sample_collection)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L5044">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#get_group_media_types" title="fiftyone.core.stages.SelectGroupSlices.get_group_media_types">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fiftyone.core.stages.ViewStage.html#get_group_media_types" class="internal-link">fiftyone.core.stages.ViewStage.get_group_media_types</a></code></div>
+    <div><p>Returns the group media types outputted by this stage, if any, when
+applied to the given collection, if and only if they are different from
+the input collection.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">sample<wbr></wbr>_collection</span></td><td class="fieldArgDesc">the
+<code><a href="fiftyone.core.collections.SampleCollection.html" class="internal-link">fiftyone.core.collections.SampleCollection</a></code> to which
+the stage is being applied</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">a dict mapping slice names to media types, or <tt class="rst-docutils rst-literal">None</tt> if the stage
+does not change the types</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  
   <a name="fiftyone.core.stages.SelectGroupSlices.get_media_type">
     
   </a>
@@ -1794,7 +1902,7 @@ returned</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">media
     
     
     <span class="py-keyword">def</span> <span class="py-defname">get_media_type</span><span class="function-signature">(self, sample_collection)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4754">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4950">
       
       (source)
     </a>
@@ -1824,7 +1932,7 @@ the stage is being applied</td></tr><tr class="fieldStart"><td class="fieldName"
     
     
     <span class="py-keyword">def</span> <span class="py-defname">to_mongo</span><span class="function-signature">(self, sample_collection)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4690">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4877">
       
       (source)
     </a>
@@ -1855,7 +1963,7 @@ the stage is being applied</td></tr><tr class="fieldStart"><td class="fieldName"
     
     
     <span class="py-keyword">def</span> <span class="py-defname">validate</span><span class="function-signature">(self, sample_collection)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4810">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L5009">
       
       (source)
     </a>
@@ -1874,6 +1982,67 @@ collection</td></tr></table></div>
 </div><div class="baseproperty">
   
   
+  <a name="fiftyone.core.stages.SelectGroupSlices.flat">
+    
+  </a>
+  <a name="flat">
+    
+  </a>
+  <div class="functionHeader">
+    @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
+    <span class="py-defname">flat</span> =
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4868">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#flat" title="fiftyone.core.stages.SelectGroupSlices.flat">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>Whether to generate a flattened collection.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.core.stages.SelectGroupSlices.flattens_groups">
+    
+  </a>
+  <a name="flattens_groups">
+    
+  </a>
+  <div class="functionHeader">
+    @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
+    <span class="py-defname">flattens_groups</span> =
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4873">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#flattens_groups" title="fiftyone.core.stages.SelectGroupSlices.flattens_groups">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fiftyone.core.stages.ViewStage.html#flattens_groups" class="internal-link">fiftyone.core.stages.ViewStage.flattens_groups</a></code></div>
+    <div><p>Whether this stage flattens groups into a non-grouped collection.</p>
+<p>The possible return values are:</p>
+<ul class="rst-simple">
+<li><tt class="rst-docutils rst-literal">True</tt>: this stage <em>flattens</em> groups</li>
+<li><tt class="rst-docutils rst-literal">False</tt>: this stage <em>does not flatten</em> groups</li>
+<li><tt class="rst-docutils rst-literal">None</tt>: this stage does not change group status</li>
+</ul>
+</div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
   <a name="fiftyone.core.stages.SelectGroupSlices.media_type">
     
   </a>
@@ -1883,7 +2052,7 @@ collection</td></tr></table></div>
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">media_type</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4685">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4863">
       
       (source)
     </a>
@@ -1895,7 +2064,7 @@ collection</td></tr></table></div>
   </div>
   <div class="functionBody">
     
-    <div><p>The media type whose slices to select.</p></div>
+    <div><p>The media type(s) whose slices to select.</p></div>
     
   </div>
 </div><div class="baseproperty">
@@ -1910,7 +2079,7 @@ collection</td></tr></table></div>
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">slices</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4680">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4858">
       
       (source)
     </a>
@@ -1938,7 +2107,7 @@ collection</td></tr></table></div>
     
     @<a href="https://docs.python.org/3/library/functions.html#classmethod" class="intersphinx-link">classmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">_params</span><span class="function-signature">(cls)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4860">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L5070">
       
       (source)
     </a>
@@ -1956,33 +2125,6 @@ parameters.</p><table class="fieldTable"><tr class="fieldStart"><td class="field
 </div><div class="basemethod private">
   
   
-  <a name="fiftyone.core.stages.SelectGroupSlices._get_group_media_types">
-    
-  </a>
-  <a name="_get_group_media_types">
-    
-  </a>
-  <div class="functionHeader">
-    
-    
-    <span class="py-keyword">def</span> <span class="py-defname">_get_group_media_types</span><span class="function-signature">(self, sample_collection)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4835">
-      
-      (source)
-    </a>
-    <a class="headerLink" href="#_get_group_media_types" title="fiftyone.core.stages.SelectGroupSlices._get_group_media_types">
-      
-      
-      ¶
-    </a>
-  </div>
-  <div class="docstring functionBody">
-    
-    <div><p class="undocumented">Undocumented</p></div>
-  </div>
-</div><div class="basemethod private">
-  
-  
   <a name="fiftyone.core.stages.SelectGroupSlices._get_slices">
     
   </a>
@@ -1993,7 +2135,7 @@ parameters.</p><table class="fieldTable"><tr class="fieldStart"><td class="field
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_get_slices</span><span class="function-signature">(self, sample_collection)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4814">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L5013">
       
       (source)
     </a>
@@ -2020,7 +2162,7 @@ parameters.</p><table class="fieldTable"><tr class="fieldStart"><td class="field
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_kwargs</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4852">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L5061">
       
       (source)
     </a>
@@ -2048,7 +2190,7 @@ of this stage instance.</p><table class="fieldTable"><tr class="fieldStart"><td 
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_make_pipeline</span><span class="function-signature">(self, sample_collection)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4711">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4901">
       
       (source)
     </a>
@@ -2075,7 +2217,7 @@ of this stage instance.</p><table class="fieldTable"><tr class="fieldStart"><td 
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_make_root_pipeline</span><span class="function-signature">(self, sample_collection)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4699">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4889">
       
       (source)
     </a>
@@ -2101,11 +2243,38 @@ of this stage instance.</p><table class="fieldTable"><tr class="fieldStart"><td 
   <div class="functionHeader">
     
     <span class="py-defname">_allow_mixed</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4677">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4855">
       
       (source)
     </a>
     <a class="headerLink" href="#_allow_mixed" title="fiftyone.core.stages.SelectGroupSlices._allow_mixed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.core.stages.SelectGroupSlices._flat">
+    
+  </a>
+  <a name="_flat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_flat</span> =
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4854">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_flat" title="fiftyone.core.stages.SelectGroupSlices._flat">
       
       
       ¶
@@ -2128,7 +2297,7 @@ of this stage instance.</p><table class="fieldTable"><tr class="fieldStart"><td 
   <div class="functionHeader">
     
     <span class="py-defname">_force_mixed</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4678">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4856">
       
       (source)
     </a>
@@ -2155,7 +2324,7 @@ of this stage instance.</p><table class="fieldTable"><tr class="fieldStart"><td 
   <div class="functionHeader">
     
     <span class="py-defname">_media_type</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4676">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4853">
       
       (source)
     </a>
@@ -2182,7 +2351,7 @@ of this stage instance.</p><table class="fieldTable"><tr class="fieldStart"><td 
   <div class="functionHeader">
     
     <span class="py-defname">_slices</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4675">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/stages.py#L4852">
       
       (source)
     </a>
@@ -2209,7 +2378,7 @@ of this stage instance.</p><table class="fieldTable"><tr class="fieldStart"><td 
   <div class="container-fluid">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/voxel51/" class="projecthome">FiftyOne</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.11.2 at 2025-03-19 23:40:43.
+    24.11.2 at 2025-03-22 02:44:25.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

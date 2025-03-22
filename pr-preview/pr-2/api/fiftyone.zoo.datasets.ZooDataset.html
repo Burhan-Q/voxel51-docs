@@ -310,6 +310,16 @@
         
 
         
+            <div class="itemName"><code><a href="#license" class="internal-link" title="fiftyone.zoo.datasets.ZooDataset.license">license</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#name" class="internal-link" title="fiftyone.zoo.datasets.ZooDataset.name">name</a></code>
             </div>
         
@@ -791,7 +801,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ZooDataset</span>(<a href="https://docs.python.org/3/library/functions.html#object" class="intersphinx-link">object</a>): <a href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1060" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fiftyone.zoo.datasets.base.FiftyOneDataset.html" class="internal-link">fiftyone.zoo.datasets.base.FiftyOneDataset</a></code>, <code><a href="fiftyone.zoo.datasets.DeprecatedZooDataset.html" class="internal-link">fiftyone.zoo.datasets.DeprecatedZooDataset</a></code>, <code><a href="fiftyone.zoo.datasets.RemoteZooDataset.html" class="internal-link">fiftyone.zoo.datasets.RemoteZooDataset</a></code>, <code><a href="fiftyone.zoo.datasets.tf.TFDSDataset.html" class="internal-link">fiftyone.zoo.datasets.tf.TFDSDataset</a></code>, <code><a href="fiftyone.zoo.datasets.torch.TorchVisionDataset.html" class="internal-link">fiftyone.zoo.datasets.torch.TorchVisionDataset</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ZooDataset</span>(<a href="https://docs.python.org/3/library/functions.html#object" class="intersphinx-link">object</a>): <a href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1076" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fiftyone.zoo.datasets.base.FiftyOneDataset.html" class="internal-link">fiftyone.zoo.datasets.base.FiftyOneDataset</a></code>, <code><a href="fiftyone.zoo.datasets.DeprecatedZooDataset.html" class="internal-link">fiftyone.zoo.datasets.DeprecatedZooDataset</a></code>, <code><a href="fiftyone.zoo.datasets.RemoteZooDataset.html" class="internal-link">fiftyone.zoo.datasets.RemoteZooDataset</a></code>, <code><a href="fiftyone.zoo.datasets.tf.TFDSDataset.html" class="internal-link">fiftyone.zoo.datasets.tf.TFDSDataset</a></code>, <code><a href="fiftyone.zoo.datasets.torch.TorchVisionDataset.html" class="internal-link">fiftyone.zoo.datasets.torch.TorchVisionDataset</a></code></p>
           <p><a href="classIndex.html#fiftyone.zoo.datasets.ZooDataset">View In Hierarchy</a></p>
         </div>
 
@@ -800,7 +810,7 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id2532">
+          <table class="children sortable" id="id2555">
   
   
   <tr class="staticmethod">
@@ -863,6 +873,11 @@
     <td>Property</td>
     <td><code><a href="#is_remote" class="internal-link" title="fiftyone.zoo.datasets.ZooDataset.is_remote">is<wbr></wbr>_remote</a></code></td>
     <td>Whether the dataset is remotely-sourced.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#license" class="internal-link" title="fiftyone.zoo.datasets.ZooDataset.license">license</a></code></td>
+    <td>The license or list,of,licenses under which the dataset is distributed, or None if unknown.</td>
   </tr><tr class="property">
     
     <td>Property</td>
@@ -939,7 +954,7 @@
     
     @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">get_info_path</span><span class="function-signature">(dataset_dir)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1202">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1225">
       
       (source)
     </a>
@@ -966,7 +981,7 @@
     
     @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">has_info</span><span class="function-signature">(dataset_dir)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1170">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1193">
       
       (source)
     </a>
@@ -993,7 +1008,7 @@
     
     @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">load_info</span><span class="function-signature">(dataset_dir, upgrade=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, warn_deprecated=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1183">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1206">
       
       (source)
     </a>
@@ -1022,7 +1037,7 @@ has a deprecated format</td></tr><tr class="fieldStart"><td class="fieldName" co
     
     
     <span class="py-keyword">def</span> <span class="py-defname">download_and_prepare</span><span class="function-signature">(self, dataset_dir, split=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, splits=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, cleanup=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1214">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1237">
       
       (source)
     </a>
@@ -1056,7 +1071,7 @@ during download</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2
     
     
     <span class="py-keyword">def</span> <span class="py-defname">get_split_dir</span><span class="function-signature">(self, dataset_dir, split)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1152">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1175">
       
       (source)
     </a>
@@ -1083,7 +1098,7 @@ during download</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2
     
     
     <span class="py-keyword">def</span> <span class="py-defname">has_split</span><span class="function-signature">(self, split)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1141">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1164">
       
       (source)
     </a>
@@ -1110,7 +1125,7 @@ during download</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2
     
     
     <span class="py-keyword">def</span> <span class="py-defname">has_tag</span><span class="function-signature">(self, tag)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1130">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1153">
       
       (source)
     </a>
@@ -1136,7 +1151,7 @@ during download</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">has_patches</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1102">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1125">
       
       (source)
     </a>
@@ -1164,7 +1179,7 @@ already downloaded files.</p></div>
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">has_splits</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1097">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1120">
       
       (source)
     </a>
@@ -1191,7 +1206,7 @@ already downloaded files.</p></div>
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">has_tags</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1078">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1101">
       
       (source)
     </a>
@@ -1218,7 +1233,7 @@ already downloaded files.</p></div>
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">importer_kwargs</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1123">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1146">
       
       (source)
     </a>
@@ -1246,7 +1261,7 @@ already downloaded files.</p></div>
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">is_remote</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1068">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1084">
       
       (source)
     </a>
@@ -1264,6 +1279,34 @@ already downloaded files.</p></div>
 </div><div class="baseproperty">
   
   
+  <a name="fiftyone.zoo.datasets.ZooDataset.license">
+    
+  </a>
+  <a name="license">
+    
+  </a>
+  <div class="functionHeader">
+    @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
+    <span class="py-defname">license</span> =
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1089">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#license" title="fiftyone.zoo.datasets.ZooDataset.license">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="fiftyone.zoo.datasets.base.ActivityNet100Dataset.html" class="internal-link">fiftyone.zoo.datasets.base.ActivityNet100Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.ActivityNet200Dataset.html" class="internal-link">fiftyone.zoo.datasets.base.ActivityNet200Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.BDD100KDataset.html" class="internal-link">fiftyone.zoo.datasets.base.BDD100KDataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.Caltech101Dataset.html" class="internal-link">fiftyone.zoo.datasets.base.Caltech101Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.Caltech256Dataset.html" class="internal-link">fiftyone.zoo.datasets.base.Caltech256Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.CityscapesDataset.html" class="internal-link">fiftyone.zoo.datasets.base.CityscapesDataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.COCO2014Dataset.html" class="internal-link">fiftyone.zoo.datasets.base.COCO2014Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.COCO2017Dataset.html" class="internal-link">fiftyone.zoo.datasets.base.COCO2017Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.FIWDataset.html" class="internal-link">fiftyone.zoo.datasets.base.FIWDataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.HMDB51Dataset.html" class="internal-link">fiftyone.zoo.datasets.base.HMDB51Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.ImageNetSampleDataset.html" class="internal-link">fiftyone.zoo.datasets.base.ImageNetSampleDataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.Kinetics400Dataset.html" class="internal-link">fiftyone.zoo.datasets.base.Kinetics400Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.Kinetics600Dataset.html" class="internal-link">fiftyone.zoo.datasets.base.Kinetics600Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.Kinetics7002020Dataset.html" class="internal-link">fiftyone.zoo.datasets.base.Kinetics7002020Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.Kinetics700Dataset.html" class="internal-link">fiftyone.zoo.datasets.base.Kinetics700Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.KITTIDataset.html" class="internal-link">fiftyone.zoo.datasets.base.KITTIDataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.KITTIMultiviewDataset.html" class="internal-link">fiftyone.zoo.datasets.base.KITTIMultiviewDataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.LabeledFacesInTheWildDataset.html" class="internal-link">fiftyone.zoo.datasets.base.LabeledFacesInTheWildDataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.OpenImagesV6Dataset.html" class="internal-link">fiftyone.zoo.datasets.base.OpenImagesV6Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.OpenImagesV7Dataset.html" class="internal-link">fiftyone.zoo.datasets.base.OpenImagesV7Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.PlacesDataset.html" class="internal-link">fiftyone.zoo.datasets.base.PlacesDataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.Quickstart3DDataset.html" class="internal-link">fiftyone.zoo.datasets.base.Quickstart3DDataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.QuickstartDataset.html" class="internal-link">fiftyone.zoo.datasets.base.QuickstartDataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.QuickstartGeoDataset.html" class="internal-link">fiftyone.zoo.datasets.base.QuickstartGeoDataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.QuickstartGroupsDataset.html" class="internal-link">fiftyone.zoo.datasets.base.QuickstartGroupsDataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.QuickstartVideoDataset.html" class="internal-link">fiftyone.zoo.datasets.base.QuickstartVideoDataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.SamaCOCODataset.html" class="internal-link">fiftyone.zoo.datasets.base.SamaCOCODataset</a></code>, <code><a href="fiftyone.zoo.datasets.base.UCF101Dataset.html" class="internal-link">fiftyone.zoo.datasets.base.UCF101Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.RemoteZooDataset.html" class="internal-link">fiftyone.zoo.datasets.RemoteZooDataset</a></code>, <code><a href="fiftyone.zoo.datasets.tf.CIFAR100Dataset.html" class="internal-link">fiftyone.zoo.datasets.tf.CIFAR100Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.tf.CIFAR10Dataset.html" class="internal-link">fiftyone.zoo.datasets.tf.CIFAR10Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.tf.FashionMNISTDataset.html" class="internal-link">fiftyone.zoo.datasets.tf.FashionMNISTDataset</a></code>, <code><a href="fiftyone.zoo.datasets.tf.ImageNet2012Dataset.html" class="internal-link">fiftyone.zoo.datasets.tf.ImageNet2012Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.tf.MNISTDataset.html" class="internal-link">fiftyone.zoo.datasets.tf.MNISTDataset</a></code>, <code><a href="fiftyone.zoo.datasets.tf.VOC2007Dataset.html" class="internal-link">fiftyone.zoo.datasets.tf.VOC2007Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.tf.VOC2012Dataset.html" class="internal-link">fiftyone.zoo.datasets.tf.VOC2012Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.torch.CIFAR100Dataset.html" class="internal-link">fiftyone.zoo.datasets.torch.CIFAR100Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.torch.CIFAR10Dataset.html" class="internal-link">fiftyone.zoo.datasets.torch.CIFAR10Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.torch.FashionMNISTDataset.html" class="internal-link">fiftyone.zoo.datasets.torch.FashionMNISTDataset</a></code>, <code><a href="fiftyone.zoo.datasets.torch.ImageNet2012Dataset.html" class="internal-link">fiftyone.zoo.datasets.torch.ImageNet2012Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.torch.MNISTDataset.html" class="internal-link">fiftyone.zoo.datasets.torch.MNISTDataset</a></code>, <code><a href="fiftyone.zoo.datasets.torch.VOC2007Dataset.html" class="internal-link">fiftyone.zoo.datasets.torch.VOC2007Dataset</a></code>, <code><a href="fiftyone.zoo.datasets.torch.VOC2012Dataset.html" class="internal-link">fiftyone.zoo.datasets.torch.VOC2012Dataset</a></code></div>
+    <div><p>The license or list,of,licenses under which the dataset is
+distributed, or None if unknown.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
   <a name="fiftyone.zoo.datasets.ZooDataset.name">
     
   </a>
@@ -1273,7 +1316,7 @@ already downloaded files.</p></div>
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">name</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1063">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1079">
       
       (source)
     </a>
@@ -1300,7 +1343,7 @@ already downloaded files.</p></div>
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">parameters</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1083">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1106">
       
       (source)
     </a>
@@ -1328,7 +1371,7 @@ zoo dataset when it was downloaded.</p></div>
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">requires_manual_download</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1116">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1139">
       
       (source)
     </a>
@@ -1356,7 +1399,7 @@ by the user before the dataset can be loaded.</p></div>
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">supported_splits</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1090">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1113">
       
       (source)
     </a>
@@ -1384,7 +1427,7 @@ does not have splits.</p></div>
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">supports_partial_downloads</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1109">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1132">
       
       (source)
     </a>
@@ -1412,7 +1455,7 @@ splits.</p></div>
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">tags</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1073">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1096">
       
       (source)
     </a>
@@ -1440,7 +1483,7 @@ splits.</p></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_download_and_prepare</span><span class="function-signature">(self, dataset_dir, scratch_dir, split)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1367">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1390">
       
       (source)
     </a>
@@ -1479,7 +1522,7 @@ indicates that all content was already downloaded</li>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_get_splits_to_download</span><span class="function-signature">(self, splits, dataset_dir, info)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1406">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1429">
       
       (source)
     </a>
@@ -1506,7 +1549,7 @@ indicates that all content was already downloaded</li>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_is_dataset_ready</span><span class="function-signature">(self, dataset_dir, info)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1436">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1459">
       
       (source)
     </a>
@@ -1533,7 +1576,7 @@ indicates that all content was already downloaded</li>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_is_split_ready</span><span class="function-signature">(self, dataset_dir, split, info)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1414">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1437">
       
       (source)
     </a>
@@ -1560,7 +1603,7 @@ indicates that all content was already downloaded</li>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_patch_if_necessary</span><span class="function-signature">(self, dataset_dir, split)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1393">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/zoo/datasets/__init__.py#L1416">
       
       (source)
     </a>
@@ -1588,7 +1631,7 @@ splits</td></tr></table></div>
   <div class="container-fluid">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/voxel51/" class="projecthome">FiftyOne</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.11.2 at 2025-03-19 23:40:43.
+    24.11.2 at 2025-03-22 02:44:25.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

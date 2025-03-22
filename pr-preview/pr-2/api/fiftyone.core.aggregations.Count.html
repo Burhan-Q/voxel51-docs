@@ -263,6 +263,16 @@
         
 
         
+            <div class="itemName"><code><a href="#_optimize" class="internal-link" title="fiftyone.core.aggregations.Count._optimize">_optimize</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#_unwind" class="internal-link" title="fiftyone.core.aggregations.Count._unwind">_unwind</a></code>
             </div>
         
@@ -774,7 +784,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Count</span>(<a href="fiftyone.core.aggregations.Aggregation.html" class="internal-link" title="fiftyone.core.aggregations.Aggregation">Aggregation</a>): <a href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/aggregations.py#L447" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fiftyone.server.aggregations._CountExists.html" class="internal-link">fiftyone.server.aggregations._CountExists</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fiftyone.core.aggregations.Count.__init__">Count(field_or_expr, expr, safe, _unwind)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Count</span>(<a href="fiftyone.core.aggregations.Aggregation.html" class="internal-link" title="fiftyone.core.aggregations.Aggregation">Aggregation</a>): <a href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/aggregations.py#L448" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fiftyone.server.aggregations._CountExists.html" class="internal-link">fiftyone.server.aggregations._CountExists</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fiftyone.core.aggregations.Count.__init__">Count(field_or_expr, expr, safe, _optimize, _unwind)</a></code></p>
           <p><a href="classIndex.html#fiftyone.core.aggregations.Count">View In Hierarchy</a></p>
         </div>
 
@@ -896,6 +906,11 @@ floating point values</td></tr></table></div>
   </tr><tr class="instancevariable private">
     
     <td>Instance Variable</td>
+    <td><code><a href="#_optimize" class="internal-link" title="fiftyone.core.aggregations.Count._optimize">_optimize</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
     <td><code><a href="#_unwind" class="internal-link" title="fiftyone.core.aggregations.Count._unwind">_unwind</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr>
@@ -997,8 +1012,8 @@ floating point values</td></tr></table></div>
   <div class="functionHeader">
     
     
-    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, field_or_expr=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, expr=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, safe=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, _unwind=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/aggregations.py#L539">
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, field_or_expr=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, expr=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, safe=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, _optimize=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, _unwind=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/aggregations.py#L540">
       
       (source)
     </a>
@@ -1025,7 +1040,7 @@ floating point values</td></tr></table></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">default_result</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/aggregations.py#L548">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/aggregations.py#L555">
       
       (source)
     </a>
@@ -1052,7 +1067,7 @@ floating point values</td></tr></table></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">parse_result</span><span class="function-signature">(self, d)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/aggregations.py#L556">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/aggregations.py#L563">
       
       (source)
     </a>
@@ -1079,7 +1094,7 @@ floating point values</td></tr></table></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">to_mongo</span><span class="function-signature">(self, sample_collection, context=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/aggregations.py#L567">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/aggregations.py#L574">
       
       (source)
     </a>
@@ -1108,7 +1123,7 @@ the aggregation is being applied</td></tr><tr><td class="fieldArgContainer"><spa
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_kwargs</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/aggregations.py#L545">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/aggregations.py#L552">
       
       (source)
     </a>
@@ -1126,6 +1141,33 @@ of this aggregation instance.</p><table class="fieldTable"><tr class="fieldStart
 </div><div class="baseinstancevariable private">
   
   
+  <a name="fiftyone.core.aggregations.Count._optimize">
+    
+  </a>
+  <a name="_optimize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_optimize</span> =
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/aggregations.py#L549">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_optimize" title="fiftyone.core.aggregations.Count._optimize">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
   <a name="fiftyone.core.aggregations.Count._unwind">
     
   </a>
@@ -1135,7 +1177,7 @@ of this aggregation instance.</p><table class="fieldTable"><tr class="fieldStart
   <div class="functionHeader">
     
     <span class="py-defname">_unwind</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/aggregations.py#L543">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/aggregations.py#L550">
       
       (source)
     </a>
@@ -1162,7 +1204,7 @@ of this aggregation instance.</p><table class="fieldTable"><tr class="fieldStart
   <div class="container-fluid">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/voxel51/" class="projecthome">FiftyOne</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.11.2 at 2025-03-19 23:40:43.
+    24.11.2 at 2025-03-22 02:44:25.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

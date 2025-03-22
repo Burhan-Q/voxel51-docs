@@ -581,7 +581,8 @@ the <tt class="rst-docutils rst-literal">mask</tt> attribute of the provided obj
 <code><a href="fiftyone.core.labels.Detection.html" class="internal-link">fiftyone.core.labels.Detection</a></code> instances</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">use<wbr></wbr>_boxes</span></td><td class="fieldArgDesc">whether to compute IoUs using the bounding boxes
 of the provided <code><a href="fiftyone.core.labels.Polyline.html" class="internal-link">fiftyone.core.labels.Polyline</a></code> instances
 rather than using their actual geometries</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">tolerance</span></td><td class="fieldArgDesc">a tolerance, in pixels, when generating approximate
-polylines for instance masks. Typical values are 1-3 pixels</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">compute_m<wbr></wbr>AP</span></td><td class="fieldArgDesc">whether to perform the necessary computations so
+polylines for instance masks. Typical values are 1-3 pixels. By
+default, IoUs are computed directly on the dense pixel masks</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">compute_m<wbr></wbr>AP</span></td><td class="fieldArgDesc">whether to perform the necessary computations so
 that mAP, mAR, and PR curves can be generated</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">iou<wbr></wbr>_threshs</span></td><td class="fieldArgDesc">a list of IoU thresholds to use when computing mAP
 and PR curves. Only applicable when <tt class="rst-docutils rst-literal">compute_mAP</tt> is True</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">max<wbr></wbr>_preds</span></td><td class="fieldArgDesc">the maximum number of predicted objects to evaluate
 when computing mAP and PR curves. Only applicable when
@@ -599,7 +600,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id1901">
+          <table class="children sortable" id="id1917">
   
   
   <tr class="method">
@@ -658,7 +659,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
             <p class="inheritedFrom">
               Inherited from <code><a href="fiftyone.utils.eval.detection.DetectionEvaluationConfig.html" class="internal-link" title="fiftyone.utils.eval.detection.DetectionEvaluationConfig">DetectionEvaluationConfig</a></code>:
             </p>
-            <table class="children sortable" id="id1902">
+            <table class="children sortable" id="id1918">
   
   
   <tr class="baseinstancevariable">
@@ -687,7 +688,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
             <p class="inheritedFrom">
               Inherited from <code><a href="fiftyone.core.runs.BaseRunConfig.html" class="internal-link" title="fiftyone.core.runs.BaseRunConfig">BaseRunConfig</a></code> (via <code><a href="fiftyone.utils.eval.detection.DetectionEvaluationConfig.html" class="internal-link" title="fiftyone.utils.eval.detection.DetectionEvaluationConfig">DetectionEvaluationConfig</a></code>, <code><a href="fiftyone.utils.eval.base.BaseEvaluationMethodConfig.html" class="internal-link" title="fiftyone.utils.eval.base.BaseEvaluationMethodConfig">BaseEvaluationMethodConfig</a></code>, <code><a href="fiftyone.core.evaluation.EvaluationMethodConfig.html" class="internal-link" title="fiftyone.core.evaluation.EvaluationMethodConfig">EvaluationMethodConfig</a></code>):
             </p>
-            <table class="children sortable" id="id1903">
+            <table class="children sortable" id="id1919">
   
   
   <tr class="baseclassmethod">
@@ -736,7 +737,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
             <p class="inheritedFrom">
               Inherited from <code><a href="fiftyone.core.config.Config.html" class="internal-link" title="fiftyone.core.config.Config">Config</a></code> (via <code><a href="fiftyone.utils.eval.detection.DetectionEvaluationConfig.html" class="internal-link" title="fiftyone.utils.eval.detection.DetectionEvaluationConfig">DetectionEvaluationConfig</a></code>, <code><a href="fiftyone.utils.eval.base.BaseEvaluationMethodConfig.html" class="internal-link" title="fiftyone.utils.eval.base.BaseEvaluationMethodConfig">BaseEvaluationMethodConfig</a></code>, <code><a href="fiftyone.core.evaluation.EvaluationMethodConfig.html" class="internal-link" title="fiftyone.core.evaluation.EvaluationMethodConfig">EvaluationMethodConfig</a></code>, <code><a href="fiftyone.core.runs.BaseRunConfig.html" class="internal-link" title="fiftyone.core.runs.BaseRunConfig">BaseRunConfig</a></code>):
             </p>
-            <table class="children sortable" id="id1904">
+            <table class="children sortable" id="id1920">
   
   
   <tr class="basemethod">
@@ -765,7 +766,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, pred_field, gt_field, iou=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, classwise=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, iscrowd=<span class="rst-variable-quote">'</span><span class="rst-variable-string">iscrowd</span><span class="rst-variable-quote">'</span>, use_masks=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, use_boxes=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, tolerance=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, compute_mAP=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, iou_threshs=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, max_preds=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, error_level=1, custom_metrics=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, **kwargs)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L74">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L75">
       
       (source)
     </a>
@@ -791,7 +792,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">compute_mAP</span>: <code><a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L110">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L111">
       
       (source)
     </a>
@@ -818,7 +819,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">error_level</span>: <span class="literal">1</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L113">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L114">
       
       (source)
     </a>
@@ -845,7 +846,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">iou_threshs</span>: <code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L111">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L112">
       
       (source)
     </a>
@@ -872,7 +873,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">iscrowd</span>: <span class="literal">"iscrowd"</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L106">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L107">
       
       (source)
     </a>
@@ -899,7 +900,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">max_preds</span>: <code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L112">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L113">
       
       (source)
     </a>
@@ -926,7 +927,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">tolerance</span>: <code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L109">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L110">
       
       (source)
     </a>
@@ -953,7 +954,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">use_boxes</span>: <code><a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L108">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L109">
       
       (source)
     </a>
@@ -980,7 +981,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">use_masks</span>: <code><a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L107">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L108">
       
       (source)
     </a>
@@ -1007,7 +1008,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">method</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L115">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/coco.py#L116">
       
       (source)
     </a>
@@ -1034,7 +1035,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="container-fluid">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/voxel51/" class="projecthome">FiftyOne</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.11.2 at 2025-03-19 23:40:43.
+    24.11.2 at 2025-03-22 02:44:25.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

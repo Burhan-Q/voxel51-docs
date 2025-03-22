@@ -700,7 +700,7 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id886">
+          <table class="children sortable" id="id901">
   
   
   <tr class="class">
@@ -769,7 +769,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">make_optimized_select_view</span><span class="function-signature">(sample_collection, sample_ids, ordered=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, groups=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, flatten=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/view.py#L1932">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/view.py#L1959">
       
       (source)
     </a>
@@ -792,7 +792,7 @@ documents in the input collection.</p>
 <table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">sample<wbr></wbr>_collection</span></td><td class="fieldArgDesc">a
 <code><a href="fiftyone.core.collections.SampleCollection.html" class="internal-link">fiftyone.core.collections.SampleCollection</a></code></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">sample<wbr></wbr>_ids</span></td><td class="fieldArgDesc">a sample ID or iterable of sample IDs to select</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ordered:</span><code><a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a></code></td><td class="fieldArgDesc">whether to sort the samples in the returned view to
 match the order of the provided IDs</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">groups:</span><code><a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a></code></td><td class="fieldArgDesc">whether the IDs are group IDs, not sample IDs</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">flatten:</span><code><a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a></code></td><td class="fieldArgDesc">whether to flatten group datasets before selecting
-sample ids</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">a <code><a href="fiftyone.core.view.DatasetView.html" class="internal-link" title="fiftyone.core.view.DatasetView">DatasetView</a></code></td></tr></table></div>
+sample IDs</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">a <code><a href="fiftyone.core.view.DatasetView.html" class="internal-link" title="fiftyone.core.view.DatasetView">DatasetView</a></code></td></tr></table></div>
   </div>
 </div><div class="basevariable">
   
@@ -806,7 +806,7 @@ sample ids</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Ret
   <div class="functionHeader">
     
     <span class="py-defname">fost</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/view.py#L29">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/view.py#L30">
       
       (source)
     </a>
@@ -834,7 +834,7 @@ sample ids</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Ret
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_discard_nested_leafs</span><span class="function-signature">(paths)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/view.py#L2121">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/view.py#L2148">
       
       (source)
     </a>
@@ -861,7 +861,7 @@ sample ids</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Ret
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_filter_embedded_field_schema</span><span class="function-signature">(field, path, selected_fields, excluded_fields)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/view.py#L2099">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/view.py#L2126">
       
       (source)
     </a>
@@ -888,7 +888,7 @@ sample ids</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Ret
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_filter_schema</span><span class="function-signature">(schema, selected_fields, excluded_fields)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/view.py#L2025">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/view.py#L2052">
       
       (source)
     </a>
@@ -915,7 +915,7 @@ sample ids</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Ret
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_merge_selected_fields</span><span class="function-signature">(selected_fields, sf)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/view.py#L2007">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/view.py#L2034">
       
       (source)
     </a>
@@ -942,7 +942,7 @@ sample ids</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Ret
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_parse_excluded_fields</span><span class="function-signature">(paths)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/view.py#L2081">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/view.py#L2108">
       
       (source)
     </a>
@@ -969,7 +969,7 @@ sample ids</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Ret
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_parse_selected_fields</span><span class="function-signature">(paths)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/view.py#L2060">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/view.py#L2087">
       
       (source)
     </a>
@@ -995,7 +995,7 @@ sample ids</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Ret
   <div class="container-fluid">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/voxel51/" class="projecthome">FiftyOne</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.11.2 at 2025-03-19 23:40:43.
+    24.11.2 at 2025-03-22 02:44:25.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

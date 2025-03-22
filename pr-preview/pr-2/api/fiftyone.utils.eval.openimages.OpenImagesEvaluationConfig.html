@@ -671,7 +671,8 @@ the <tt class="rst-docutils rst-literal">mask</tt> attribute of the provided obj
 <code><a href="fiftyone.core.labels.Detection.html" class="internal-link">fiftyone.core.labels.Detection</a></code> instances</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">use<wbr></wbr>_boxes</span></td><td class="fieldArgDesc">whether to compute IoUs using the bounding boxes
 of the provided <code><a href="fiftyone.core.labels.Polyline.html" class="internal-link">fiftyone.core.labels.Polyline</a></code> instances
 rather than using their actual geometries</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">tolerance</span></td><td class="fieldArgDesc">a tolerance, in pixels, when generating approximate
-polylines for instance masks. Typical values are 1-3 pixels</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">max<wbr></wbr>_preds</span></td><td class="fieldArgDesc">the maximum number of predicted objects to evaluate
+polylines for instance masks. Typical values are 1-3 pixels. By
+default, IoUs are computed directly on the dense pixel masks</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">max<wbr></wbr>_preds</span></td><td class="fieldArgDesc">the maximum number of predicted objects to evaluate
 when computing mAP and PR curves</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">error<wbr></wbr>_level</span></td><td class="fieldArgDesc"><p>the error level to use when manipulating instance
 masks or polylines. Valid values are:</p>
 <ul class="rst-simple">
@@ -694,7 +695,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id1931">
+          <table class="children sortable" id="id1947">
   
   
   <tr class="method">
@@ -783,7 +784,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
             <p class="inheritedFrom">
               Inherited from <code><a href="fiftyone.utils.eval.detection.DetectionEvaluationConfig.html" class="internal-link" title="fiftyone.utils.eval.detection.DetectionEvaluationConfig">DetectionEvaluationConfig</a></code>:
             </p>
-            <table class="children sortable" id="id1932">
+            <table class="children sortable" id="id1948">
   
   
   <tr class="baseinstancevariable">
@@ -807,7 +808,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
             <p class="inheritedFrom">
               Inherited from <code><a href="fiftyone.core.runs.BaseRunConfig.html" class="internal-link" title="fiftyone.core.runs.BaseRunConfig">BaseRunConfig</a></code> (via <code><a href="fiftyone.utils.eval.detection.DetectionEvaluationConfig.html" class="internal-link" title="fiftyone.utils.eval.detection.DetectionEvaluationConfig">DetectionEvaluationConfig</a></code>, <code><a href="fiftyone.utils.eval.base.BaseEvaluationMethodConfig.html" class="internal-link" title="fiftyone.utils.eval.base.BaseEvaluationMethodConfig">BaseEvaluationMethodConfig</a></code>, <code><a href="fiftyone.core.evaluation.EvaluationMethodConfig.html" class="internal-link" title="fiftyone.core.evaluation.EvaluationMethodConfig">EvaluationMethodConfig</a></code>):
             </p>
-            <table class="children sortable" id="id1933">
+            <table class="children sortable" id="id1949">
   
   
   <tr class="baseclassmethod">
@@ -856,7 +857,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
             <p class="inheritedFrom">
               Inherited from <code><a href="fiftyone.core.config.Config.html" class="internal-link" title="fiftyone.core.config.Config">Config</a></code> (via <code><a href="fiftyone.utils.eval.detection.DetectionEvaluationConfig.html" class="internal-link" title="fiftyone.utils.eval.detection.DetectionEvaluationConfig">DetectionEvaluationConfig</a></code>, <code><a href="fiftyone.utils.eval.base.BaseEvaluationMethodConfig.html" class="internal-link" title="fiftyone.utils.eval.base.BaseEvaluationMethodConfig">BaseEvaluationMethodConfig</a></code>, <code><a href="fiftyone.core.evaluation.EvaluationMethodConfig.html" class="internal-link" title="fiftyone.core.evaluation.EvaluationMethodConfig">EvaluationMethodConfig</a></code>, <code><a href="fiftyone.core.runs.BaseRunConfig.html" class="internal-link" title="fiftyone.core.runs.BaseRunConfig">BaseRunConfig</a></code>):
             </p>
-            <table class="children sortable" id="id1934">
+            <table class="children sortable" id="id1950">
   
   
   <tr class="basemethod">
@@ -885,7 +886,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, pred_field, gt_field, iou=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, classwise=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, iscrowd=<span class="rst-variable-quote">'</span><span class="rst-variable-string">IsGroupOf</span><span class="rst-variable-quote">'</span>, use_masks=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, use_boxes=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, tolerance=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, max_preds=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, error_level=1, hierarchy=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, pos_label_field=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, neg_label_field=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, expand_gt_hierarchy=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, expand_pred_hierarchy=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, custom_metrics=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, **kwargs)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L76">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L77">
       
       (source)
     </a>
@@ -911,7 +912,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">error_level</span>: <span class="literal">1</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L110">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L111">
       
       (source)
     </a>
@@ -938,7 +939,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">expand_gt_hierarchy</span>: <code><a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L114">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L115">
       
       (source)
     </a>
@@ -965,7 +966,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">expand_pred_hierarchy</span>: <code><a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L115">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L116">
       
       (source)
     </a>
@@ -992,7 +993,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">hierarchy</span>: <code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L111">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L112">
       
       (source)
     </a>
@@ -1019,7 +1020,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">iscrowd</span>: <span class="literal">"IsGroupOf"</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L105">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L106">
       
       (source)
     </a>
@@ -1046,7 +1047,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">max_preds</span>: <code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L109">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L110">
       
       (source)
     </a>
@@ -1073,7 +1074,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">neg_label_field</span>: <code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L113">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L114">
       
       (source)
     </a>
@@ -1100,7 +1101,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">pos_label_field</span>: <code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L112">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L113">
       
       (source)
     </a>
@@ -1127,7 +1128,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">tolerance</span>: <code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L108">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L109">
       
       (source)
     </a>
@@ -1154,7 +1155,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">use_boxes</span>: <code><a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L107">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L108">
       
       (source)
     </a>
@@ -1181,7 +1182,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     
     <span class="py-defname">use_masks</span>: <code><a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L106">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L107">
       
       (source)
     </a>
@@ -1208,7 +1209,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">method</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L134">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L135">
       
       (source)
     </a>
@@ -1235,7 +1236,7 @@ or dict mapping metric names to kwargs dicts</td></tr></table></div>
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">requires_additional_fields</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L138">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L139">
       
       (source)
     </a>
@@ -1267,7 +1268,7 @@ to optimize.</p>
   <div class="functionHeader">
     
     <span class="py-defname">_hierarchy_keyed_child</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L128">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L129">
       
       (source)
     </a>
@@ -1294,7 +1295,7 @@ to optimize.</p>
   <div class="functionHeader">
     
     <span class="py-defname">_hierarchy_keyed_parent</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L128">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/openimages.py#L129">
       
       (source)
     </a>
@@ -1321,7 +1322,7 @@ to optimize.</p>
   <div class="container-fluid">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/voxel51/" class="projecthome">FiftyOne</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.11.2 at 2025-03-19 23:40:43.
+    24.11.2 at 2025-03-22 02:44:25.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

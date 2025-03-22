@@ -131,6 +131,16 @@
         
 
         
+            <div class="itemName"><code><a href="#default_active_fields" class="internal-link" title="fiftyone.core.odm.dataset.DatasetAppConfig.default_active_fields">default<wbr></wbr>_active<wbr></wbr>_fields</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#default_sidebar_groups" class="internal-link" title="fiftyone.core.odm.dataset.DatasetAppConfig.default_sidebar_groups">default<wbr></wbr>_sidebar<wbr></wbr>_groups</a></code>
             </div>
         
@@ -463,6 +473,16 @@
         
 
         
+            <div class="itemName"><code><a href="#active_fields" class="internal-link" title="fiftyone.core.odm.dataset.DatasetAppConfig.active_fields">active<wbr></wbr>_fields</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#color_scheme" class="internal-link" title="fiftyone.core.odm.dataset.DatasetAppConfig.color_scheme">color<wbr></wbr>_scheme</a></code>
             </div>
         
@@ -609,6 +629,16 @@
         
 
         
+            <div class="itemName"><code><a href="fiftyone.core.odm.dataset.ActiveFields.html" class="internal-link" title="fiftyone.core.odm.dataset.ActiveFields"><wbr></wbr>Active<wbr></wbr>Fields</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="fiftyone.core.odm.dataset.ColorScheme.html" class="internal-link" title="fiftyone.core.odm.dataset.ColorScheme"><wbr></wbr>Color<wbr></wbr>Scheme</a></code>
             </div>
         
@@ -676,6 +706,26 @@
 
         
             <div class="itemName"><code><a href="fiftyone.core.odm.dataset.html#_delete_path" class="internal-link" title="fiftyone.core.odm.dataset._delete_path">_delete<wbr></wbr>_path</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.odm.dataset.html#_get_non_dense_label_paths" class="internal-link" title="fiftyone.core.odm.dataset._get_non_dense_label_paths">_get<wbr></wbr>_non<wbr></wbr>_dense<wbr></wbr>_label<wbr></wbr>_paths</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.odm.dataset.html#_make_default_active_fields" class="internal-link" title="fiftyone.core.odm.dataset._make_default_active_fields">_make<wbr></wbr>_default<wbr></wbr>_active<wbr></wbr>_fields</a></code>
             </div>
         
 
@@ -814,22 +864,21 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">DatasetAppConfig</span>(<a href="fiftyone.core.odm.embedded_document.EmbeddedDocument.html" class="internal-link" title="fiftyone.core.odm.embedded_document.EmbeddedDocument">EmbeddedDocument</a>): <a href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L512" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="fiftyone.core.odm.embedded_document.EmbeddedDocument.html#__init__" class="internal-link" title="fiftyone.core.odm.embedded_document.EmbeddedDocument.__init__">DatasetAppConfig(*args, **kwargs)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">DatasetAppConfig</span>(<a href="fiftyone.core.odm.embedded_document.EmbeddedDocument.html" class="internal-link" title="fiftyone.core.odm.embedded_document.EmbeddedDocument">EmbeddedDocument</a>): <a href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L528" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="fiftyone.core.odm.embedded_document.EmbeddedDocument.html#__init__" class="internal-link" title="fiftyone.core.odm.embedded_document.EmbeddedDocument.__init__">DatasetAppConfig(*args, **kwargs)</a></code></p>
           <p><a href="classIndex.html#fiftyone.core.odm.dataset.DatasetAppConfig">View In Hierarchy</a></p>
         </div>
 
         <div class="moduleDocstring">
           <div><p>Dataset-specific settings that customize how a dataset is visualized in
-the App.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">color<wbr></wbr>_scheme</span></td><td class="fieldArgDesc">an optional <code><a href="fiftyone.core.odm.dataset.ColorScheme.html" class="internal-link" title="fiftyone.core.odm.dataset.ColorScheme">ColorScheme</a></code> for the dataset</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">disable<wbr></wbr>_frame<wbr></wbr>_filtering</span></td><td class="fieldArgDesc">whether to disable frame filtering for
-video datasets in the App's grid view</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">grid<wbr></wbr>_media<wbr></wbr>_field</span></td><td class="fieldArgDesc">the default sample field from which to
-serve media in the App's grid view
-media_fallback (False): whether to fall back to the default media
+the App.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">active<wbr></wbr>_fields</span></td><td class="fieldArgDesc">an optional <code><a href="fiftyone.core.odm.dataset.ActiveFields.html" class="internal-link" title="fiftyone.core.odm.dataset.ActiveFields">ActiveFields</a></code> dataset default</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">color<wbr></wbr>_scheme</span></td><td class="fieldArgDesc">an optional <code><a href="fiftyone.core.odm.dataset.ColorScheme.html" class="internal-link" title="fiftyone.core.odm.dataset.ColorScheme">ColorScheme</a></code> dataset default</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">disable<wbr></wbr>_frame<wbr></wbr>_filtering</span></td><td class="fieldArgDesc">whether to disable frame filtering for
+video datasets in the App's grid view</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dynamic<wbr></wbr>_groups<wbr></wbr>_target<wbr></wbr>_frame<wbr></wbr>_rate</span></td><td class="fieldArgDesc">the target frame rate when
+rendering ordered dynamic groups of images as videos</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">grid<wbr></wbr>_media<wbr></wbr>_field</span></td><td class="fieldArgDesc">the default sample field from which to
+serve media in the App's grid view</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">media<wbr></wbr>_fallback</span></td><td class="fieldArgDesc">whether to fall back to the default media
 field (<tt class="rst-docutils rst-literal">"filepath"</tt>) when the alternate media field value for a
 sample is not defined</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">media<wbr></wbr>_fields</span></td><td class="fieldArgDesc">the list of sample fields that contain
 media and should be available to choose from the App's settings
 menus</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">modal<wbr></wbr>_media<wbr></wbr>_field</span></td><td class="fieldArgDesc">the default sample field from which to
-serve media in the App's modal view</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dynamic<wbr></wbr>_groups<wbr></wbr>_target<wbr></wbr>_frame<wbr></wbr>_rate</span></td><td class="fieldArgDesc">the target frame rate when
-rendering ordered dynamic groups of images as videos</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">plugins</span></td><td class="fieldArgDesc"><p>an optional dict mapping plugin names to plugin
+serve media in the App's modal view</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">plugins</span></td><td class="fieldArgDesc"><p>an optional dict mapping plugin names to plugin
 configuration dicts. Builtin plugins include:</p>
 <ul class="rst-simple">
 <li><tt class="rst-docutils rst-literal">"map"</tt>: See the :ref:`map plugin docs &lt;app-map-panel&gt;` for
@@ -844,10 +893,15 @@ the App</td></tr></table></div>
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id377">
+          <table class="children sortable" id="id381">
   
   
   <tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#default_active_fields" class="internal-link" title="fiftyone.core.odm.dataset.DatasetAppConfig.default_active_fields">default<wbr></wbr>_active<wbr></wbr>_fields</a></code></td>
+    <td>Generates the default <tt class="rst-docutils rst-literal">active_fields</tt> for the given collection.</td>
+  </tr><tr class="staticmethod">
     
     <td>Static Method</td>
     <td><code><a href="#default_sidebar_groups" class="internal-link" title="fiftyone.core.odm.dataset.DatasetAppConfig.default_sidebar_groups">default<wbr></wbr>_sidebar<wbr></wbr>_groups</a></code></td>
@@ -857,6 +911,11 @@ the App</td></tr></table></div>
     <td>Method</td>
     <td><code><a href="#is_custom" class="internal-link" title="fiftyone.core.odm.dataset.DatasetAppConfig.is_custom">is<wbr></wbr>_custom</a></code></td>
     <td>Determines whether this app config differs from the default one.</td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><code><a href="#active_fields" class="internal-link" title="fiftyone.core.odm.dataset.DatasetAppConfig.active_fields">active<wbr></wbr>_fields</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="classvariable">
     
     <td>Class Variable</td>
@@ -938,7 +997,7 @@ the App</td></tr></table></div>
             <p class="inheritedFrom">
               Inherited from <code><a href="fiftyone.core.odm.embedded_document.EmbeddedDocument.html" class="internal-link" title="fiftyone.core.odm.embedded_document.EmbeddedDocument">EmbeddedDocument</a></code>:
             </p>
-            <table class="children sortable" id="id378">
+            <table class="children sortable" id="id382">
   
   
   <tr class="basemethod">
@@ -952,7 +1011,7 @@ the App</td></tr></table></div>
             <p class="inheritedFrom">
               Inherited from <code><a href="fiftyone.core.odm.document.MongoEngineBaseDocument.html" class="internal-link" title="fiftyone.core.odm.document.MongoEngineBaseDocument">MongoEngineBaseDocument</a></code> (via <code><a href="fiftyone.core.odm.embedded_document.EmbeddedDocument.html" class="internal-link" title="fiftyone.core.odm.embedded_document.EmbeddedDocument">EmbeddedDocument</a></code>, <code><a href="fiftyone.core.odm.embedded_document.BaseEmbeddedDocument.html" class="internal-link" title="fiftyone.core.odm.embedded_document.BaseEmbeddedDocument">BaseEmbeddedDocument</a></code>):
             </p>
-            <table class="children sortable" id="id379">
+            <table class="children sortable" id="id383">
   
   
   <tr class="baseclassmethod">
@@ -1046,7 +1105,7 @@ the App</td></tr></table></div>
             <p class="inheritedFrom">
               Inherited from <code><a href="fiftyone.core.odm.document.SerializableDocument.html" class="internal-link" title="fiftyone.core.odm.document.SerializableDocument">SerializableDocument</a></code> (via <code><a href="fiftyone.core.odm.embedded_document.EmbeddedDocument.html" class="internal-link" title="fiftyone.core.odm.embedded_document.EmbeddedDocument">EmbeddedDocument</a></code>, <code><a href="fiftyone.core.odm.embedded_document.BaseEmbeddedDocument.html" class="internal-link" title="fiftyone.core.odm.embedded_document.BaseEmbeddedDocument">BaseEmbeddedDocument</a></code>, <code><a href="fiftyone.core.odm.document.MongoEngineBaseDocument.html" class="internal-link" title="fiftyone.core.odm.document.MongoEngineBaseDocument">MongoEngineBaseDocument</a></code>):
             </p>
-            <table class="children sortable" id="id380">
+            <table class="children sortable" id="id384">
   
   
   <tr class="baseclassmethod">
@@ -1105,6 +1164,46 @@ the App</td></tr></table></div>
           <div class="basestaticmethod">
   
   
+  <a name="fiftyone.core.odm.dataset.DatasetAppConfig.default_active_fields">
+    
+  </a>
+  <a name="default_active_fields">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
+    <span class="py-keyword">def</span> <span class="py-defname">default_active_fields</span><span class="function-signature">(sample_collection)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L578">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#default_active_fields" title="fiftyone.core.odm.dataset.DatasetAppConfig.default_active_fields">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Generates the default <tt class="rst-docutils rst-literal">active_fields</tt> for the given collection.</p>
+<p>Examples:</p>
+<pre class="rst-literal-block">
+import fiftyone as fo
+import fiftyone.zoo as foz
+
+dataset = foz.load_zoo_dataset("quickstart")
+
+active_fields = fo.DatasetAppConfig.default_active_fields(dataset)
+dataset.app_config.active_fields = active_fields
+print(dataset.app_config)
+</pre>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">sample<wbr></wbr>_collection</span></td><td class="fieldArgDesc">a
+<code><a href="fiftyone.core.collections.SampleCollection.html" class="internal-link">fiftyone.core.collections.SampleCollection</a></code></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">an <code><a href="fiftyone.core.odm.dataset.ActiveFields.html" class="internal-link" title="fiftyone.core.odm.dataset.ActiveFields">ActiveFields</a></code> instance</td></tr></table></div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
   <a name="fiftyone.core.odm.dataset.DatasetAppConfig.default_sidebar_groups">
     
   </a>
@@ -1115,7 +1214,7 @@ the App</td></tr></table></div>
     
     @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">default_sidebar_groups</span><span class="function-signature">(sample_collection)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L560">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L602">
       
       (source)
     </a>
@@ -1155,7 +1254,7 @@ print(dataset.app_config)
     
     
     <span class="py-keyword">def</span> <span class="py-defname">is_custom</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L584">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L626">
       
       (source)
     </a>
@@ -1172,6 +1271,33 @@ print(dataset.app_config)
 </div><div class="baseclassvariable">
   
   
+  <a name="fiftyone.core.odm.dataset.DatasetAppConfig.active_fields">
+    
+  </a>
+  <a name="active_fields">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">active_fields</span>: <code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code> =
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L565">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#active_fields" title="fiftyone.core.odm.dataset.DatasetAppConfig.active_fields">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseclassvariable">
+  
+  
   <a name="fiftyone.core.odm.dataset.DatasetAppConfig.color_scheme">
     
   </a>
@@ -1181,7 +1307,7 @@ print(dataset.app_config)
   <div class="functionHeader">
     
     <span class="py-defname">color_scheme</span>: <code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L548">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L566">
       
       (source)
     </a>
@@ -1208,7 +1334,7 @@ print(dataset.app_config)
   <div class="functionHeader">
     
     <span class="py-defname">disable_frame_filtering</span>: <code><a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L549">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L567">
       
       (source)
     </a>
@@ -1235,7 +1361,7 @@ print(dataset.app_config)
   <div class="functionHeader">
     
     <span class="py-defname">dynamic_groups_target_frame_rate</span>: <span class="literal">30</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L550">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L568">
       
       (source)
     </a>
@@ -1261,8 +1387,8 @@ print(dataset.app_config)
   </a>
   <div class="functionHeader">
     
-    <span class="py-defname">media_fallback</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L552">
+    <span class="py-defname">media_fallback</span>: <code><a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a></code> =
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L570">
       
       (source)
     </a>
@@ -1289,7 +1415,7 @@ print(dataset.app_config)
   <div class="functionHeader">
     
     <span class="py-defname">media_fields</span>: [<span class="literal">"filepath"</span>] =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L553">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L571">
       
       (source)
     </a>
@@ -1316,7 +1442,7 @@ print(dataset.app_config)
   <div class="functionHeader">
     
     <span class="py-defname">meta</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>[<wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a>, <wbr></wbr><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a>]</code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L546">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L563">
       
       (source)
     </a>
@@ -1343,7 +1469,7 @@ print(dataset.app_config)
   <div class="functionHeader">
     
     <span class="py-defname">plugins</span>: <span class="literal">{}</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L555">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L573">
       
       (source)
     </a>
@@ -1370,7 +1496,7 @@ print(dataset.app_config)
   <div class="functionHeader">
     
     <span class="py-defname">grid_media_field</span>: <span class="literal">"filepath"</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L551">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L569">
       
       (source)
     </a>
@@ -1397,7 +1523,7 @@ print(dataset.app_config)
   <div class="functionHeader">
     
     <span class="py-defname">modal_media_field</span>: <span class="literal">"filepath"</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L554">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L572">
       
       (source)
     </a>
@@ -1424,7 +1550,7 @@ print(dataset.app_config)
   <div class="functionHeader">
     
     <span class="py-defname">sidebar_groups</span>: <code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L556">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L574">
       
       (source)
     </a>
@@ -1452,7 +1578,7 @@ print(dataset.app_config)
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_add_path_to_sidebar_group</span><span class="function-signature">(self, path, sidebar_group, after_group=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, dataset=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L630">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L678">
       
       (source)
     </a>
@@ -1479,7 +1605,7 @@ print(dataset.app_config)
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_delete_path</span><span class="function-signature">(self, path)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L592">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L634">
       
       (source)
     </a>
@@ -1506,7 +1632,7 @@ print(dataset.app_config)
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_delete_paths</span><span class="function-signature">(self, paths)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L605">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L650">
       
       (source)
     </a>
@@ -1533,7 +1659,7 @@ print(dataset.app_config)
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_rename_path</span><span class="function-signature">(self, path, new_path)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L609">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L654">
       
       (source)
     </a>
@@ -1560,7 +1686,7 @@ print(dataset.app_config)
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_rename_paths</span><span class="function-signature">(self, paths, new_paths)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L626">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/core/odm/dataset.py#L674">
       
       (source)
     </a>
@@ -1586,7 +1712,7 @@ print(dataset.app_config)
   <div class="container-fluid">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/voxel51/" class="projecthome">FiftyOne</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.11.2 at 2025-03-19 23:40:43.
+    24.11.2 at 2025-03-22 02:44:25.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

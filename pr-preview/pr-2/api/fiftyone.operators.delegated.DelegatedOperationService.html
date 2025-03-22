@@ -291,6 +291,26 @@
         
 
         
+            <div class="itemName"><code><a href="#set_log_size" class="internal-link" title="fiftyone.operators.delegated.DelegatedOperationService.set_log_size">set<wbr></wbr>_log<wbr></wbr>_size</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_log_upload_error" class="internal-link" title="fiftyone.operators.delegated.DelegatedOperationService.set_log_upload_error">set<wbr></wbr>_log<wbr></wbr>_upload<wbr></wbr>_error</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#set_pinned" class="internal-link" title="fiftyone.operators.delegated.DelegatedOperationService.set_pinned">set<wbr></wbr>_pinned</a></code>
             </div>
         
@@ -464,7 +484,7 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id927">
+          <table class="children sortable" id="id942">
   
   
   <tr class="method">
@@ -550,6 +570,16 @@
   </tr><tr class="method">
     
     <td>Method</td>
+    <td><code><a href="#set_log_size" class="internal-link" title="fiftyone.operators.delegated.DelegatedOperationService.set_log_size">set<wbr></wbr>_log<wbr></wbr>_size</a></code></td>
+    <td>Sets the log size for the given delegated operation.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_log_upload_error" class="internal-link" title="fiftyone.operators.delegated.DelegatedOperationService.set_log_upload_error">set<wbr></wbr>_log<wbr></wbr>_upload<wbr></wbr>_error</a></code></td>
+    <td>Sets the log upload error for the given delegated operation.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
     <td><code><a href="#set_pinned" class="internal-link" title="fiftyone.operators.delegated.DelegatedOperationService.set_pinned">set<wbr></wbr>_pinned</a></code></td>
     <td>Sets the pinned flag for the given delegated operation.</td>
   </tr><tr class="method">
@@ -630,7 +660,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">count</span><span class="function-signature">(self, filters=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, search=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L425">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L461">
       
       (source)
     </a>
@@ -657,7 +687,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">delete_for_dataset</span><span class="function-signature">(self, dataset_id)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L266">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L302">
       
       (source)
     </a>
@@ -684,7 +714,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">delete_operation</span><span class="function-signature">(self, doc_id)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L255">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L291">
       
       (source)
     </a>
@@ -710,8 +740,8 @@
   <div class="functionHeader">
     
     
-    <span class="py-keyword">def</span> <span class="py-defname">execute_operation</span><span class="function-signature">(self, operation, log=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, run_link=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L437">
+    <span class="py-keyword">def</span> <span class="py-defname">execute_operation</span><span class="function-signature">(self, operation, log=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, run_link=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, log_path=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L473">
       
       (source)
     </a>
@@ -726,7 +756,7 @@
     <div><p>Executes the given delegated operation.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">operation</span></td><td class="fieldArgDesc">the
 <code><a href="fiftyone.factory.repos.delegated_operation_doc.DelegatedOperationDocument.html" class="internal-link" title="fiftyone.factory.repos.delegated_operation_doc.DelegatedOperationDocument">fiftyone.factory.repos.DelegatedOperationDocument</a></code></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">log:</span><code><a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a></code></td><td class="fieldArgDesc">the optional boolean flag to log the execution of the
 delegated operations</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">run<wbr></wbr>_link:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional link to orchestrator-specific
-information about the operation</td></tr></table></div>
+information about the operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">log<wbr></wbr>_path:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional path to the log file for the operation</td></tr></table></div>
   </div>
 </div><div class="basemethod">
   
@@ -741,7 +771,7 @@ information about the operation</td></tr></table></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">execute_queued_operations</span><span class="function-signature">(self, operator=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, delegation_target=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, dataset_name=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, limit=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, log=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, **kwargs)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L383">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L419">
       
       (source)
     </a>
@@ -773,7 +803,7 @@ delegated operations</td></tr><tr><td class="fieldArgContainer"><span class="fie
     
     
     <span class="py-keyword">def</span> <span class="py-defname">get</span><span class="function-signature">(self, doc_id)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L330">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L366">
       
       (source)
     </a>
@@ -800,7 +830,7 @@ delegated operations</td></tr><tr><td class="fieldArgContainer"><span class="fie
     
     
     <span class="py-keyword">def</span> <span class="py-defname">get_queued_operations</span><span class="function-signature">(self, operator=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, dataset_name=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L286">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L322">
       
       (source)
     </a>
@@ -829,7 +859,7 @@ the queued delegated operations for</td></tr><tr class="fieldStart"><td class="f
     
     
     <span class="py-keyword">def</span> <span class="py-defname">get_running_operations</span><span class="function-signature">(self, operator=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, dataset_name=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L316">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L352">
       
       (source)
     </a>
@@ -858,7 +888,7 @@ the running delegated operations for</td></tr><tr class="fieldStart"><td class="
     
     
     <span class="py-keyword">def</span> <span class="py-defname">get_scheduled_operations</span><span class="function-signature">(self, operator=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, dataset_name=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L302">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L338">
       
       (source)
     </a>
@@ -887,7 +917,7 @@ the scheduled delegated operations for</td></tr><tr class="fieldStart"><td class
     
     
     <span class="py-keyword">def</span> <span class="py-defname">list_operations</span><span class="function-signature">(self, operator=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, dataset_name=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, dataset_id=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, run_state=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, delegation_target=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, paging=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, search=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, **kwargs)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L341">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L377">
       
       (source)
     </a>
@@ -951,7 +981,7 @@ the operator if not supplied)</td></tr><tr><td class="fieldArgContainer"><span c
     
     
     <span class="py-keyword">def</span> <span class="py-defname">rerun_operation</span><span class="function-signature">(self, doc_id)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L274">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L310">
       
       (source)
     </a>
@@ -977,8 +1007,8 @@ the operator if not supplied)</td></tr><tr><td class="fieldArgContainer"><span c
   <div class="functionHeader">
     
     
-    <span class="py-keyword">def</span> <span class="py-defname">set_completed</span><span class="function-signature">(self, doc_id, result=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, progress=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, run_link=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, required_state=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L154">
+    <span class="py-keyword">def</span> <span class="py-defname">set_completed</span><span class="function-signature">(self, doc_id, result=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, progress=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, run_link=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, log_path=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, required_state=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L157">
       
       (source)
     </a>
@@ -995,7 +1025,7 @@ the operator if not supplied)</td></tr><tr><td class="fieldArgContainer"><span c
 operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">progress:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional
 <code><a href="fiftyone.operators.executor.ExecutionProgress.html" class="internal-link">fiftyone.operators.executor.ExecutionProgress</a></code> of the
 operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">run<wbr></wbr>_link:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional link to orchestrator-specific
-information about the operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">required<wbr></wbr>_state:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional
+information about the operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">log<wbr></wbr>_path:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional path to the log file for the operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">required<wbr></wbr>_state:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional
 <code><a href="fiftyone.operators.executor.ExecutionRunState.html" class="internal-link">fiftyone.operators.executor.ExecutionRunState</a></code> required
 state of the operation. If provided, the update will only be
 performed if the referenced operation matches this state.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2"><dl class="rst-docutils">
@@ -1016,8 +1046,8 @@ performed if the referenced operation matches this state.</td></tr><tr class="fi
   <div class="functionHeader">
     
     
-    <span class="py-keyword">def</span> <span class="py-defname">set_failed</span><span class="function-signature">(self, doc_id, result=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, progress=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, run_link=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, required_state=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L193">
+    <span class="py-keyword">def</span> <span class="py-defname">set_failed</span><span class="function-signature">(self, doc_id, result=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, progress=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, run_link=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, log_path=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, required_state=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L199">
       
       (source)
     </a>
@@ -1034,7 +1064,7 @@ performed if the referenced operation matches this state.</td></tr><tr class="fi
 operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">progress:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional
 <code><a href="fiftyone.operators.executor.ExecutionProgress.html" class="internal-link">fiftyone.operators.executor.ExecutionProgress</a></code> of the
 operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">run<wbr></wbr>_link:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional link to orchestrator-specific
-information about the operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">required<wbr></wbr>_state:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional
+information about the operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">log<wbr></wbr>_path:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional path to the log file for the operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">required<wbr></wbr>_state:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional
 <code><a href="fiftyone.operators.executor.ExecutionRunState.html" class="internal-link">fiftyone.operators.executor.ExecutionRunState</a></code> required
 state of the operation. If provided, the update will only be
 performed if the referenced operation matches this state.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2"><dl class="rst-docutils">
@@ -1056,7 +1086,7 @@ performed if the referenced operation matches this state.</td></tr><tr class="fi
     
     
     <span class="py-keyword">def</span> <span class="py-defname">set_label</span><span class="function-signature">(self, doc_id, label)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L243">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L252">
       
       (source)
     </a>
@@ -1073,6 +1103,60 @@ performed if the referenced operation matches this state.</td></tr><tr class="fi
 </div><div class="basemethod">
   
   
+  <a name="fiftyone.operators.delegated.DelegatedOperationService.set_log_size">
+    
+  </a>
+  <a name="set_log_size">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_log_size</span><span class="function-signature">(self, doc_id, log_size)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L279">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#set_log_size" title="fiftyone.operators.delegated.DelegatedOperationService.set_log_size">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Sets the log size for the given delegated operation.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">doc<wbr></wbr>_id</span></td><td class="fieldArgDesc">the ID of the delegated operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">log<wbr></wbr>_size</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">log size</span></td><td class="fieldArgDesc">the size of the log file for the given delegated operation.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">a <code><a href="fiftyone.factory.repos.delegated_operation_doc.DelegatedOperationDocument.html" class="internal-link" title="fiftyone.factory.repos.delegated_operation_doc.DelegatedOperationDocument">fiftyone.factory.repos.DelegatedOperationDocument</a></code></td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.delegated.DelegatedOperationService.set_log_upload_error">
+    
+  </a>
+  <a name="set_log_upload_error">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_log_upload_error</span><span class="function-signature">(self, doc_id, log_upload_error)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L264">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#set_log_upload_error" title="fiftyone.operators.delegated.DelegatedOperationService.set_log_upload_error">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Sets the log upload error for the given delegated operation.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">doc<wbr></wbr>_id</span></td><td class="fieldArgDesc">the ID of the delegated operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">log<wbr></wbr>_upload<wbr></wbr>_error</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">log upload error</span></td><td class="fieldArgDesc">the error message if we failed to upload</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">logs for the given delegated operation<wbr></wbr>.</span></td><td class="fieldArgDesc"></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">a <code><a href="fiftyone.factory.repos.delegated_operation_doc.DelegatedOperationDocument.html" class="internal-link" title="fiftyone.factory.repos.delegated_operation_doc.DelegatedOperationDocument">fiftyone.factory.repos.DelegatedOperationDocument</a></code></td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  
   <a name="fiftyone.operators.delegated.DelegatedOperationService.set_pinned">
     
   </a>
@@ -1083,7 +1167,7 @@ performed if the referenced operation matches this state.</td></tr><tr class="fi
     
     
     <span class="py-keyword">def</span> <span class="py-defname">set_pinned</span><span class="function-signature">(self, doc_id, pinned=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L231">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L240">
       
       (source)
     </a>
@@ -1139,7 +1223,7 @@ operation</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Retu
     
     
     <span class="py-keyword">def</span> <span class="py-defname">set_queued</span><span class="function-signature">(self, doc_id, required_state=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L134">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L137">
       
       (source)
     </a>
@@ -1172,7 +1256,7 @@ performed if the referenced operation matches this state.</td></tr><tr class="fi
   <div class="functionHeader">
     
     
-    <span class="py-keyword">def</span> <span class="py-defname">set_running</span><span class="function-signature">(self, doc_id, progress=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, run_link=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, required_state=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
+    <span class="py-keyword">def</span> <span class="py-defname">set_running</span><span class="function-signature">(self, doc_id, progress=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, run_link=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, log_path=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, required_state=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
     <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L82">
       
       (source)
@@ -1188,7 +1272,7 @@ performed if the referenced operation matches this state.</td></tr><tr class="fi
     <div><p>Sets the given delegated operation to running state.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">doc<wbr></wbr>_id</span></td><td class="fieldArgDesc">the ID of the delegated operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">progress:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional
 <code><a href="fiftyone.operators.executor.ExecutionProgress.html" class="internal-link">fiftyone.operators.executor.ExecutionProgress</a></code> of the
 operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">run<wbr></wbr>_link:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional link to orchestrator-specific
-information about the operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">required<wbr></wbr>_state:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional
+information about the operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">log<wbr></wbr>_path:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional path to the log file for the operation</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">required<wbr></wbr>_state:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional
 <code><a href="fiftyone.operators.executor.ExecutionRunState.html" class="internal-link">fiftyone.operators.executor.ExecutionRunState</a></code> required
 state of the operation. If provided, the update will only be
 performed if the referenced operation matches this state.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2"><dl class="rst-docutils">
@@ -1210,7 +1294,7 @@ performed if the referenced operation matches this state.</td></tr><tr class="fi
     
     
     <span class="py-keyword">def</span> <span class="py-defname">set_scheduled</span><span class="function-signature">(self, doc_id, required_state=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L115">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L118">
       
       (source)
     </a>
@@ -1244,7 +1328,7 @@ performed if the referenced operation matches this state.</td></tr><tr class="fi
     
     
     <span class="py-keyword">async def</span> <span class="py-defname">_execute_operator</span><span class="function-signature">(self, doc)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L490">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/delegated.py#L530">
       
       (source)
     </a>
@@ -1297,7 +1381,7 @@ performed if the referenced operation matches this state.</td></tr><tr class="fi
   <div class="container-fluid">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/voxel51/" class="projecthome">FiftyOne</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.11.2 at 2025-03-19 23:40:43.
+    24.11.2 at 2025-03-22 02:44:25.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

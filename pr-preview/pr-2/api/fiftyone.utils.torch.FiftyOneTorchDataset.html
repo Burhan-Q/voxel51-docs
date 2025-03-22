@@ -1,0 +1,1477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>fiftyone.utils.torch.FiftyOneTorchDataset</title>
+    <meta name="generator" content="pydoctor 24.11.2"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+    <link rel="canonical" href="https://docs.voxel51.com/api/fiftyone.utils.torch.FiftyOneTorchDataset.html" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          <a href="https://github.com/voxel51/" class="projecthome">FiftyOne</a> <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="apidocs-help-button" title="Help" href="apidocs-help.html"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 10px;">
+          <p>For more information on the search, visit the <a href="apidocs-help.html#rst-search">help page</a>.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="fiftyone.utils.torch.FiftyOneTorchDataset.html" class="internal-link" title="This class"><wbr></wbr>Fifty<wbr></wbr>One<wbr></wbr>Torch<wbr></wbr>Dataset</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#distributed_init" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.distributed_init">distributed<wbr></wbr>_init</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#worker_init" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.worker_init">worker<wbr></wbr>_init</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__getitem__" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.__getitem__">__getitem__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__len__" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.__len__">__len__</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_load_cached_fields" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset._load_cached_fields">_load<wbr></wbr>_cached<wbr></wbr>_fields</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_load_samples" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset._load_samples">_load<wbr></wbr>_samples</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#cache_field_names" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.cache_field_names">cache<wbr></wbr>_field<wbr></wbr>_names</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#cached_fields" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.cached_fields">cached<wbr></wbr>_fields</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_item" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.get_item">get<wbr></wbr>_item</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#ids" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.ids">ids</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#name" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.name">name</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#stages" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.stages">stages</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#samples" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.samples">samples</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_dataset" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset._dataset">_dataset</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_samples" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset._samples">_samples</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="fiftyone.utils.torch.html" class="internal-link" title="The parent of this class">torch</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.ClassifierOutputProcessor.html" class="internal-link" title="fiftyone.utils.torch.ClassifierOutputProcessor"><wbr></wbr>Classifier<wbr></wbr>Output<wbr></wbr>Processor</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.DetectorOutputProcessor.html" class="internal-link" title="fiftyone.utils.torch.DetectorOutputProcessor"><wbr></wbr>Detector<wbr></wbr>Output<wbr></wbr>Processor</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.FiftyOneTorchDataset.html" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset"><wbr></wbr>Fifty<wbr></wbr>One<wbr></wbr>Torch<wbr></wbr>Dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.InstanceSegmenterOutputProcessor.html" class="internal-link" title="fiftyone.utils.torch.InstanceSegmenterOutputProcessor"><wbr></wbr>Instance<wbr></wbr>Segmenter<wbr></wbr>Output<wbr></wbr>Processor</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.KeypointDetectorOutputProcessor.html" class="internal-link" title="fiftyone.utils.torch.KeypointDetectorOutputProcessor"><wbr></wbr>Keypoint<wbr></wbr>Detector<wbr></wbr>Output<wbr></wbr>Processor</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.MaxResize.html" class="internal-link" title="fiftyone.utils.torch.MaxResize"><wbr></wbr>Max<wbr></wbr>Resize</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.MinResize.html" class="internal-link" title="fiftyone.utils.torch.MinResize"><wbr></wbr>Min<wbr></wbr>Resize</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.NumpySerializedList.html" class="internal-link" title="fiftyone.utils.torch.NumpySerializedList"><wbr></wbr>Numpy<wbr></wbr>Serialized<wbr></wbr>List</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.OutputProcessor.html" class="internal-link" title="fiftyone.utils.torch.OutputProcessor"><wbr></wbr>Output<wbr></wbr>Processor</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.PatchSize.html" class="internal-link" title="fiftyone.utils.torch.PatchSize"><wbr></wbr>Patch<wbr></wbr>Size</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.SaveLayerTensor.html" class="internal-link" title="fiftyone.utils.torch.SaveLayerTensor"><wbr></wbr>Save<wbr></wbr>Layer<wbr></wbr>Tensor</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.SemanticSegmenterOutputProcessor.html" class="internal-link" title="fiftyone.utils.torch.SemanticSegmenterOutputProcessor"><wbr></wbr>Semantic<wbr></wbr>Segmenter<wbr></wbr>Output<wbr></wbr>Processor</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.ToPILImage.html" class="internal-link" title="fiftyone.utils.torch.ToPILImage"><wbr></wbr>To<wbr></wbr>PILImage</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.TorchEmbeddingsMixin.html" class="internal-link" title="fiftyone.utils.torch.TorchEmbeddingsMixin"><wbr></wbr>Torch<wbr></wbr>Embeddings<wbr></wbr>Mixin</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.TorchImageClassificationDataset.html" class="internal-link" title="fiftyone.utils.torch.TorchImageClassificationDataset"><wbr></wbr>Torch<wbr></wbr>Image<wbr></wbr>Classification<wbr></wbr>Dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.TorchImageDataset.html" class="internal-link" title="fiftyone.utils.torch.TorchImageDataset"><wbr></wbr>Torch<wbr></wbr>Image<wbr></wbr>Dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.TorchImageModel.html" class="internal-link" title="fiftyone.utils.torch.TorchImageModel"><wbr></wbr>Torch<wbr></wbr>Image<wbr></wbr>Model</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.TorchImageModelConfig.html" class="internal-link" title="fiftyone.utils.torch.TorchImageModelConfig"><wbr></wbr>Torch<wbr></wbr>Image<wbr></wbr>Model<wbr></wbr>Config</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.TorchImagePatchesDataset.html" class="internal-link" title="fiftyone.utils.torch.TorchImagePatchesDataset"><wbr></wbr>Torch<wbr></wbr>Image<wbr></wbr>Patches<wbr></wbr>Dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.TorchSamplesMixin.html" class="internal-link" title="fiftyone.utils.torch.TorchSamplesMixin"><wbr></wbr>Torch<wbr></wbr>Samples<wbr></wbr>Mixin</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.TorchSerializedList.html" class="internal-link" title="fiftyone.utils.torch.TorchSerializedList"><wbr></wbr>Torch<wbr></wbr>Serialized<wbr></wbr>List</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.TorchShmSerializedList.html" class="internal-link" title="fiftyone.utils.torch.TorchShmSerializedList"><wbr></wbr>Torch<wbr></wbr>Shm<wbr></wbr>Serialized<wbr></wbr>List</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#all_gather" class="internal-link" title="fiftyone.utils.torch.all_gather">all<wbr></wbr>_gather</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#ensure_torch_hub_requirements" class="internal-link" title="fiftyone.utils.torch.ensure_torch_hub_requirements">ensure<wbr></wbr>_torch<wbr></wbr>_hub<wbr></wbr>_requirements</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#find_torch_hub_requirements" class="internal-link" title="fiftyone.utils.torch.find_torch_hub_requirements">find<wbr></wbr>_torch<wbr></wbr>_hub<wbr></wbr>_requirements</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#from_image_classification_dir_tree" class="internal-link" title="fiftyone.utils.torch.from_image_classification_dir_tree">from<wbr></wbr>_image<wbr></wbr>_classification<wbr></wbr>_dir<wbr></wbr>_tree</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#get_local_rank" class="internal-link" title="fiftyone.utils.torch.get_local_rank">get<wbr></wbr>_local<wbr></wbr>_rank</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#get_local_size" class="internal-link" title="fiftyone.utils.torch.get_local_size">get<wbr></wbr>_local<wbr></wbr>_size</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#get_rank" class="internal-link" title="fiftyone.utils.torch.get_rank">get<wbr></wbr>_rank</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#get_world_size" class="internal-link" title="fiftyone.utils.torch.get_world_size">get<wbr></wbr>_world<wbr></wbr>_size</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#install_torch_hub_requirements" class="internal-link" title="fiftyone.utils.torch.install_torch_hub_requirements">install<wbr></wbr>_torch<wbr></wbr>_hub<wbr></wbr>_requirements</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#load_torch_hub_image_model" class="internal-link" title="fiftyone.utils.torch.load_torch_hub_image_model">load<wbr></wbr>_torch<wbr></wbr>_hub<wbr></wbr>_image<wbr></wbr>_model</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#load_torch_hub_raw_model" class="internal-link" title="fiftyone.utils.torch.load_torch_hub_raw_model">load<wbr></wbr>_torch<wbr></wbr>_hub<wbr></wbr>_raw<wbr></wbr>_model</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#load_torch_hub_requirements" class="internal-link" title="fiftyone.utils.torch.load_torch_hub_requirements">load<wbr></wbr>_torch<wbr></wbr>_hub<wbr></wbr>_requirements</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#local_broadcast_process_authkey" class="internal-link" title="fiftyone.utils.torch.local_broadcast_process_authkey">local<wbr></wbr>_broadcast<wbr></wbr>_process<wbr></wbr>_authkey</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#local_scatter" class="internal-link" title="fiftyone.utils.torch.local_scatter">local<wbr></wbr>_scatter</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#recommend_num_workers" class="internal-link" title="fiftyone.utils.torch.recommend_num_workers">recommend<wbr></wbr>_num<wbr></wbr>_workers</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#_get_global_gloo_group" class="internal-link" title="fiftyone.utils.torch._get_global_gloo_group">_get<wbr></wbr>_global<wbr></wbr>_gloo<wbr></wbr>_group</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#_is_string_array" class="internal-link" title="fiftyone.utils.torch._is_string_array">_is<wbr></wbr>_string<wbr></wbr>_array</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#_load_image" class="internal-link" title="fiftyone.utils.torch._load_image">_load<wbr></wbr>_image</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#_polyline_to_bbox" class="internal-link" title="fiftyone.utils.torch._polyline_to_bbox">_polyline<wbr></wbr>_to<wbr></wbr>_bbox</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#_polylines_to_bboxes" class="internal-link" title="fiftyone.utils.torch._polylines_to_bboxes">_polylines<wbr></wbr>_to<wbr></wbr>_bboxes</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#_strip_comments" class="internal-link" title="fiftyone.utils.torch._strip_comments">_strip<wbr></wbr>_comments</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#_to_bytes_array" class="internal-link" title="fiftyone.utils.torch._to_bytes_array">_to<wbr></wbr>_bytes<wbr></wbr>_array</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#_to_eta_bbox" class="internal-link" title="fiftyone.utils.torch._to_eta_bbox">_to<wbr></wbr>_eta<wbr></wbr>_bbox</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.torch.html#logger" class="internal-link" title="fiftyone.utils.torch.logger">logger</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">fiftyone</a></code><wbr></wbr>.<code><a href="fiftyone.utils.html" class="internal-link" title="fiftyone.utils">utils</a></code><wbr></wbr>.<code><a href="fiftyone.utils.torch.html" class="internal-link" title="fiftyone.utils.torch">torch</a></code><wbr></wbr>.<code><a href="fiftyone.utils.torch.FiftyOneTorchDataset.html" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset">FiftyOneTorchDataset</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">FiftyOneTorchDataset</span>(Dataset): <a href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/torch.py#L1473" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.__init__">FiftyOneTorchDataset(samples, get_item, cache_field_names, local_process_group)</a></code></p>
+          <p><a href="classIndex.html#fiftyone.utils.torch.FiftyOneTorchDataset">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>A class that accepts a FO dataset and creates a corresponding torch.utils.data.Dataset</p>
+<div class="rst-admonition rst-admonition-notes">
+<p class="rst-admonition-title rst-first">Notes</p>
+<p>General:
+- This only works with persistent datasets.</p>
+<blockquote>
+In order to make a dataset persistent, do <code>dataset.persistent = True</code></blockquote>
+<ul>
+<li><dl class="rst-docutils rst-first">
+<dt>Process start methods</dt>
+<dd><p class="rst-first">It is recommended to use the 'spawn' and 'forkserver' start methods over 'fork'
+- Spawn and forkserver are safer when dealing with code that may be threaded (which a lot of code is, for example NumPy).
+- MongoDB, which backs FiftyOne's database, is not fork safe. In theory nothing here should be breaking, but you will see a lot of warnings.
+- When using persistent_workers=True, the overhead of 'spawn' and 'forkserver' is low.
+- When using Jupyter notebooks, if you want all of your code to be in the notebook, rather than calling it from a python file, you'll have</p>
+<blockquote class="rst-last">
+<p>to use fork. Do so at your own risk.
+You can easily set the start method for all of your torch code with the following command:
+<code>torch.multiprocessing.set_start_method('forkserver')</code></p>
+</blockquote>
+</dd>
+</dl>
+</li>
+<li><dl class="rst-docutils rst-first">
+<dt>Make sure to not touch <code>self.samples</code> or subscript this object until after</dt>
+<dd><p class="rst-first rst-last">all workers are initialized. This will help you avoid unnecessary memory
+usage. If you're using DDP, this will help your code not crash.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>DDP:
+- A helper function ::method:`distributed_init` is provided to be called by each</p>
+<blockquote>
+trainer process in the beginning of DDP training. This function:
+- Safely creates a database connection for each trainer
+- Shares an authkey between all local processes to ensure they can communicate</blockquote>
+<p>torch.utils.data.Dataloader use:
+- DO NOT use torch.Tensor.to in this function, do so in the train loop, or use</p>
+<blockquote>
+the <code>pin_memory</code> argument in your torch.utils.data.DataLoader</blockquote>
+<ul class="rst-simple">
+<li><dl class="rst-docutils rst-first">
+<dt>If using a dataloader with many workers, remember to pass</dt>
+<dd>:method:`fo.utils.torch.FiftyOneTorchDataset.worker_init` to the argument <code>worker_init_fn</code>.
+This class will not work otherwise.</dd>
+</dl>
+</li>
+<li>Using <code>persistent_workers=True</code> is a good idea.</li>
+</ul>
+<p>On reading and writing to the FO object during training:
+- Reading</p>
+<blockquote>
+<ul class="rst-simple">
+<li>Try to have as many of the reads as possible during <code><a href="#get_item" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.get_item">get_item</a></code> or</li>
+</ul>
+<blockquote>
+when caching fields rather than in the main training script loop.
+Reads into the FO object during training may slow your code down significantly.</blockquote>
+</blockquote>
+<ul class="rst-last">
+<li><dl class="rst-docutils rst-first">
+<dt>Writing</dt>
+<dd><ul class="rst-simple rst-first">
+<li>Writing currently happens on the process from which it is called. This</li>
+</ul>
+<p class="rst-last">shows moderate slowdown, and will be adressed.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">samples</span></td><td class="fieldArgDesc">a <code>fo.core.collections.SampleCollection</code></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">get<wbr></wbr>_item</span></td><td class="fieldArgDesc">a <code>Callable[`fo.core.sample.SampleView</code>, Any]`
+Must be a serializable function.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">cache<wbr></wbr>_field<wbr></wbr>_names</span></td><td class="fieldArgDesc"><p>a list of strings. Fields to cache in memory. If this
+argument is passed, get_item should be from a dict with keys and values
+corresponding to the sample's fields and values to the model input.
+This argument is highly recommended, as it offers a significant performance
+boost.
+Please note :   the field values must be pickle serializable i.e.</p>
+<blockquote>
+<code>pickle.dumps(field_value)</code> should not raise an error.
+<code>pickle.loads(pickle.dumps(field_value))</code> should have all of the
+functionality of the original field value that you would need
+in your get_item function.</blockquote>
+</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">local<wbr></wbr>_process<wbr></wbr>_group</span></td><td class="fieldArgDesc">The process group with each of the processes running the main train script
+on the machine this object is on.</td></tr></table></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id2277">
+  
+  
+  <tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#distributed_init" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.distributed_init">distributed<wbr></wbr>_init</a></code></td>
+    <td>Function to be called by each trainer process in DDP training. Facilitates communication between processes. Safely creates database connection for each trainer.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#worker_init" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.worker_init">worker<wbr></wbr>_init</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__getitem__" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.__getitem__">__getitem__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__len__" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.__len__">__len__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#cache_field_names" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.cache_field_names">cache<wbr></wbr>_field<wbr></wbr>_names</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#cached_fields" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.cached_fields">cached<wbr></wbr>_fields</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#get_item" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.get_item">get<wbr></wbr>_item</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#ids" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.ids">ids</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#name" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.name">name</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#stages" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.stages">stages</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#samples" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset.samples">samples</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_load_cached_fields" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset._load_cached_fields">_load<wbr></wbr>_cached<wbr></wbr>_fields</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_load_samples" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset._load_samples">_load<wbr></wbr>_samples</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_dataset" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset._dataset">_dataset</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_samples" class="internal-link" title="fiftyone.utils.torch.FiftyOneTorchDataset._samples">_samples</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basestaticmethod">
+  
+  
+  <a name="fiftyone.utils.torch.FiftyOneTorchDataset.distributed_init">
+    
+  </a>
+  <a name="distributed_init">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
+    <span class="py-keyword">def</span> <span class="py-defname">distributed_init</span><span class="function-signature">(dataset_name, local_process_group, view_name=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/torch.py#L1638">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#distributed_init" title="fiftyone.utils.torch.FiftyOneTorchDataset.distributed_init">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Function to be called by each trainer process in DDP training.
+Facilitates communication between processes. Safely creates database connection for each trainer.</p>
+<p>This function should be called at the beginning of the training script.</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dataset<wbr></wbr>_name</span></td><td class="fieldArgDesc">the name of the dataset to load</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">local<wbr></wbr>_process<wbr></wbr>_group</span></td><td class="fieldArgDesc">the process group with all the processes running the main training script</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">view<wbr></wbr>_name:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">the name of the view to load. If None, the whole dataset is loaded.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">The loaded <code><a href="fiftyone.core.dataset.Dataset.html" class="internal-link">fiftyone.core.dataset.Dataset</a></code> or <code><a href="fiftyone.core.view.DatasetView.html" class="internal-link">fiftyone.core.view.DatasetView</a></code></td></tr></table></div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="fiftyone.utils.torch.FiftyOneTorchDataset.worker_init">
+    
+  </a>
+  <a name="worker_init">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
+    <span class="py-keyword">def</span> <span class="py-defname">worker_init</span><span class="function-signature">(worker_id)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/torch.py#L1624">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#worker_init" title="fiftyone.utils.torch.FiftyOneTorchDataset.worker_init">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.utils.torch.FiftyOneTorchDataset.__getitem__">
+    
+  </a>
+  <a name="__getitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__getitem__</span><span class="function-signature">(self, index)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/torch.py#L1677">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#__getitem__" title="fiftyone.utils.torch.FiftyOneTorchDataset.__getitem__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.utils.torch.FiftyOneTorchDataset.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, samples: <code><a href="fiftyone.core.collections.SampleCollection.html" class="internal-link" title="fiftyone.core.collections.SampleCollection">focol.SampleCollection</a></code>, get_item: <code><a href="https://docs.python.org/3/library/typing.html#typing.Callable" class="intersphinx-link">Callable</a>[<wbr></wbr><a href="fiftyone.core.sample.SampleView.html" class="internal-link" title="fiftyone.core.sample.SampleView">fos.SampleView</a>, <wbr></wbr><a href="https://docs.python.org/3/library/typing.html#typing.Any" class="intersphinx-link">Any</a>]</code>, cache_field_names: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a>]</code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, local_process_group=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/torch.py#L1537">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#__init__" title="fiftyone.utils.torch.FiftyOneTorchDataset.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.utils.torch.FiftyOneTorchDataset.__len__">
+    
+  </a>
+  <a name="__len__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__len__</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/torch.py#L1700">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#__len__" title="fiftyone.utils.torch.FiftyOneTorchDataset.__len__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.torch.FiftyOneTorchDataset.cache_field_names">
+    
+  </a>
+  <a name="cache_field_names">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">cache_field_names</span>: <code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code> =
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/torch.py#L1576">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#cache_field_names" title="fiftyone.utils.torch.FiftyOneTorchDataset.cache_field_names">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.torch.FiftyOneTorchDataset.cached_fields">
+    
+  </a>
+  <a name="cached_fields">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">cached_fields</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a></code> =
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/torch.py#L1575">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#cached_fields" title="fiftyone.utils.torch.FiftyOneTorchDataset.cached_fields">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.torch.FiftyOneTorchDataset.get_item">
+    
+  </a>
+  <a name="get_item">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">get_item</span> =
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/torch.py#L1569">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#get_item" title="fiftyone.utils.torch.FiftyOneTorchDataset.get_item">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.torch.FiftyOneTorchDataset.ids">
+    
+  </a>
+  <a name="ids">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">ids</span> =
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/torch.py#L1573">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#ids" title="fiftyone.utils.torch.FiftyOneTorchDataset.ids">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.torch.FiftyOneTorchDataset.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">name</span> =
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/torch.py#L1562">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#name" title="fiftyone.utils.torch.FiftyOneTorchDataset.name">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.torch.FiftyOneTorchDataset.stages">
+    
+  </a>
+  <a name="stages">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">stages</span> =
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/torch.py#L1564">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#stages" title="fiftyone.utils.torch.FiftyOneTorchDataset.stages">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.utils.torch.FiftyOneTorchDataset.samples">
+    
+  </a>
+  <a name="samples">
+    
+  </a>
+  <div class="functionHeader">
+    @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
+    <span class="py-defname">samples</span> =
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/torch.py#L1617">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#samples" title="fiftyone.utils.torch.FiftyOneTorchDataset.samples">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fiftyone.utils.torch.FiftyOneTorchDataset._load_cached_fields">
+    
+  </a>
+  <a name="_load_cached_fields">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_load_cached_fields</span><span class="function-signature">(self, samples, cache_field_names, local_process_group)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/torch.py#L1586">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_load_cached_fields" title="fiftyone.utils.torch.FiftyOneTorchDataset._load_cached_fields">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fiftyone.utils.torch.FiftyOneTorchDataset._load_samples">
+    
+  </a>
+  <a name="_load_samples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_load_samples</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/torch.py#L1668">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_load_samples" title="fiftyone.utils.torch.FiftyOneTorchDataset._load_samples">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.utils.torch.FiftyOneTorchDataset._dataset">
+    
+  </a>
+  <a name="_dataset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_dataset</span> =
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/torch.py#L1582">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_dataset" title="fiftyone.utils.torch.FiftyOneTorchDataset._dataset">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.utils.torch.FiftyOneTorchDataset._samples">
+    
+  </a>
+  <a name="_samples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_samples</span> =
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/torch.py#L1583">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_samples" title="fiftyone.utils.torch.FiftyOneTorchDataset._samples">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container-fluid">
+    <a href="index.html">API Documentation</a> for <a href="https://github.com/voxel51/" class="projecthome">FiftyOne</a>,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.11.2 at 2025-03-22 02:44:25.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

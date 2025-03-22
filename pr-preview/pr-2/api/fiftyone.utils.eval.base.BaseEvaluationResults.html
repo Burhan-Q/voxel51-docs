@@ -141,6 +141,16 @@
         
 
         
+            <div class="itemName"><code><a href="#add_custom_metrics" class="internal-link" title="fiftyone.utils.eval.base.BaseEvaluationResults.add_custom_metrics">add<wbr></wbr>_custom<wbr></wbr>_metrics</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#metrics" class="internal-link" title="fiftyone.utils.eval.base.BaseEvaluationResults.metrics">metrics</a></code>
             </div>
         
@@ -524,7 +534,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">BaseEvaluationResults</span>(<a href="fiftyone.core.evaluation.EvaluationResults.html" class="internal-link" title="fiftyone.core.evaluation.EvaluationResults">foe.EvaluationResults</a>): <a href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/base.py#L125" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fiftyone.utils.eval.base.BaseClassificationResults.html" class="internal-link">fiftyone.utils.eval.base.BaseClassificationResults</a></code>, <code><a href="fiftyone.utils.eval.regression.RegressionResults.html" class="internal-link">fiftyone.utils.eval.regression.RegressionResults</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fiftyone.utils.eval.base.BaseEvaluationResults.__init__">BaseEvaluationResults(samples, config, eval_key, custom_metrics, backend)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">BaseEvaluationResults</span>(<a href="fiftyone.core.evaluation.EvaluationResults.html" class="internal-link" title="fiftyone.core.evaluation.EvaluationResults">foe.EvaluationResults</a>): <a href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/base.py#L142" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fiftyone.utils.eval.base.BaseClassificationResults.html" class="internal-link">fiftyone.utils.eval.base.BaseClassificationResults</a></code>, <code><a href="fiftyone.utils.eval.regression.RegressionResults.html" class="internal-link">fiftyone.utils.eval.regression.RegressionResults</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fiftyone.utils.eval.base.BaseEvaluationResults.__init__">BaseEvaluationResults(samples, config, eval_key, custom_metrics, backend)</a></code></p>
           <p><a href="classIndex.html#fiftyone.utils.eval.base.BaseEvaluationResults">View In Hierarchy</a></p>
         </div>
 
@@ -533,7 +543,7 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id1848">
+          <table class="children sortable" id="id1864">
   
   
   <tr class="method">
@@ -541,6 +551,11 @@
     <td>Method</td>
     <td><code><a href="#__init__" class="internal-link" title="fiftyone.utils.eval.base.BaseEvaluationResults.__init__">__init__</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#add_custom_metrics" class="internal-link" title="fiftyone.utils.eval.base.BaseEvaluationResults.add_custom_metrics">add<wbr></wbr>_custom<wbr></wbr>_metrics</a></code></td>
+    <td>Computes the given custom metrics and adds them to these results.</td>
   </tr><tr class="method">
     
     <td>Method</td>
@@ -572,7 +587,7 @@
             <p class="inheritedFrom">
               Inherited from <code><a href="fiftyone.core.runs.BaseRunResults.html" class="internal-link" title="fiftyone.core.runs.BaseRunResults">BaseRunResults</a></code> (via <code><a href="fiftyone.core.evaluation.EvaluationResults.html" class="internal-link" title="fiftyone.core.evaluation.EvaluationResults">EvaluationResults</a></code>):
             </p>
-            <table class="children sortable" id="id1849">
+            <table class="children sortable" id="id1865">
   
   
   <tr class="baseclassmethod">
@@ -666,7 +681,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, samples, config, eval_key, custom_metrics=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, backend=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/base.py#L136">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/base.py#L153">
       
       (source)
     </a>
@@ -683,6 +698,35 @@
 </div><div class="basemethod">
   
   
+  <a name="fiftyone.utils.eval.base.BaseEvaluationResults.add_custom_metrics">
+    
+  </a>
+  <a name="add_custom_metrics">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">add_custom_metrics</span><span class="function-signature">(self, custom_metrics, overwrite=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/base.py#L164">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#add_custom_metrics" title="fiftyone.utils.eval.base.BaseEvaluationResults.add_custom_metrics">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Computes the given custom metrics and adds them to these results.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">custom<wbr></wbr>_metrics</span></td><td class="fieldArgDesc">a list of custom metrics to compute or a dict
+mapping metric names to kwargs dicts</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">overwrite:</span><code><a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a></code></td><td class="fieldArgDesc">whether to recompute any custom metrics that
+have already been applied</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  
   <a name="fiftyone.utils.eval.base.BaseEvaluationResults.metrics">
     
   </a>
@@ -693,7 +737,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">metrics</span><span class="function-signature">(self, *args, **kwargs)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/base.py#L147">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/base.py#L208">
       
       (source)
     </a>
@@ -722,7 +766,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">print_metrics</span><span class="function-signature">(self, *args, digits=2, **kwargs)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/base.py#L161">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/base.py#L222">
       
       (source)
     </a>
@@ -748,7 +792,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">custom_metrics</span>: <code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/base.py#L145">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/base.py#L162">
       
       (source)
     </a>
@@ -776,7 +820,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_get_custom_metrics</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/base.py#L172">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/base.py#L233">
       
       (source)
     </a>
@@ -803,7 +847,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_print_metrics</span><span class="function-signature">(self, metrics, digits=2)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/base.py#L186">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/eval/base.py#L247">
       
       (source)
     </a>
@@ -829,7 +873,7 @@
   <div class="container-fluid">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/voxel51/" class="projecthome">FiftyOne</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.11.2 at 2025-03-19 23:40:43.
+    24.11.2 at 2025-03-22 02:44:25.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

@@ -131,6 +131,16 @@
         
 
         
+            <div class="itemName"><code><a href="#binarize_instances" class="internal-link" title="fiftyone.utils.labels.binarize_instances">binarize<wbr></wbr>_instances</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#classification_to_detections" class="internal-link" title="fiftyone.utils.labels.classification_to_detections">classification<wbr></wbr>_to<wbr></wbr>_detections</a></code>
             </div>
         
@@ -222,6 +232,16 @@
 
         
             <div class="itemName"><code><a href="#transform_segmentations" class="internal-link" title="fiftyone.utils.labels.transform_segmentations">transform<wbr></wbr>_segmentations</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_get_filepath" class="internal-link" title="fiftyone.utils.labels._get_filepath">_get<wbr></wbr>_filepath</a></code>
             </div>
         
 
@@ -884,10 +904,15 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id2074">
+          <table class="children sortable" id="id2090">
   
   
   <tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#binarize_instances" class="internal-link" title="fiftyone.utils.labels.binarize_instances">binarize<wbr></wbr>_instances</a></code></td>
+    <td>Binarizes the instance segmentations in the specified field according to the provided threshold.</td>
+  </tr><tr class="function">
     
     <td>Function</td>
     <td><code><a href="#classification_to_detections" class="internal-link" title="fiftyone.utils.labels.classification_to_detections">classification<wbr></wbr>_to<wbr></wbr>_detections</a></code></td>
@@ -940,6 +965,11 @@
   </tr><tr class="function private">
     
     <td>Function</td>
+    <td><code><a href="#_get_filepath" class="internal-link" title="fiftyone.utils.labels._get_filepath">_get<wbr></wbr>_filepath</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
     <td><code><a href="#_perform_nms" class="internal-link" title="fiftyone.utils.labels._perform_nms">_perform<wbr></wbr>_nms</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="function private">
@@ -958,6 +988,52 @@
           <div class="basefunction">
   
   
+  <a name="fiftyone.utils.labels.binarize_instances">
+    
+  </a>
+  <a name="binarize_instances">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">binarize_instances</span><span class="function-signature">(sample_collection, in_field, threshold=1, output_dir=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, rel_dir=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, overwrite=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, progress=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L562">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#binarize_instances" title="fiftyone.utils.labels.binarize_instances">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Binarizes the instance segmentations in the specified field according to
+the provided threshold.</p>
+<p>Each instance mask is updated in-place with <tt class="rst-docutils rst-literal">mask &gt;= threshold</tt>.</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">sample<wbr></wbr>_collection</span></td><td class="fieldArgDesc">a
+<code><a href="fiftyone.core.collections.SampleCollection.html" class="internal-link">fiftyone.core.collections.SampleCollection</a></code></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">in<wbr></wbr>_field</span></td><td class="fieldArgDesc">the name of a
+<code><a href="fiftyone.core.labels.Detection.html" class="internal-link">fiftyone.core.labels.Detection</a></code> or
+<code><a href="fiftyone.core.labels.Detections.html" class="internal-link">fiftyone.core.labels.Detections</a></code> field containing instance
+segmentations</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">threshold:</span><span class="literal">1</span></td><td class="fieldArgDesc">the threshold for "instance" pixels</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">output<wbr></wbr>_dir:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional output directory in which to write the
+instance segmentation images. If none is provided, the
+segmentations are overwritten in-place, either on disk or in the
+database</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">rel<wbr></wbr>_dir:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">an optional relative directory to strip from each input
+filepath to generate a unique identifier that is joined with
+<tt class="rst-docutils rst-literal">output_dir</tt> to generate an output path for each instance
+segmentation image. This argument allows for populating nested
+subdirectories in <tt class="rst-docutils rst-literal">output_dir</tt> that match the shape of the input
+paths. The path is converted to an absolute path (if necessary) via
+<code><a href="fiftyone.core.storage.html#normalize_path" class="internal-link">fiftyone.core.storage.normalize_path</a></code></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">overwrite:</span><code><a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a></code></td><td class="fieldArgDesc">whether to delete <tt class="rst-docutils rst-literal">output_dir</tt> prior to exporting
+if it exists</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">progress:</span><code><a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code></td><td class="fieldArgDesc">whether to render a progress bar (True/False), use the
+default value <tt class="rst-docutils rst-literal">fiftyone.config.show_progress_bars</tt> (None), or a
+progress callback function to invoke instead</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
   <a name="fiftyone.utils.labels.classification_to_detections">
     
   </a>
@@ -968,7 +1044,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">classification_to_detections</span><span class="function-signature">(sample_collection, in_field, out_field, progress=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L657">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L797">
       
       (source)
     </a>
@@ -1002,7 +1078,7 @@ progress callback function to invoke instead</td></tr></table></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">classifications_to_detections</span><span class="function-signature">(sample_collection, in_field, out_field, progress=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L703">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L843">
       
       (source)
     </a>
@@ -1037,7 +1113,7 @@ progress callback function to invoke instead</td></tr></table></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">export_segmentations</span><span class="function-signature">(sample_collection, in_field, output_dir, rel_dir=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, update=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, overwrite=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, progress=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L149">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L159">
       
       (source)
     </a>
@@ -1081,7 +1157,7 @@ progress callback function to invoke instead</td></tr></table></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">import_segmentations</span><span class="function-signature">(sample_collection, in_field, update=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, delete_images=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, progress=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L241">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L257">
       
       (source)
     </a>
@@ -1118,7 +1194,7 @@ progress callback function to invoke instead</td></tr></table></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">instances_to_polylines</span><span class="function-signature">(sample_collection, in_field, out_field, tolerance=2, filled=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, progress=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L526">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L666">
       
       (source)
     </a>
@@ -1209,7 +1285,7 @@ progress callback function to invoke instead</td></tr></table></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">perform_nms</span><span class="function-signature">(sample_collection, in_field, out_field=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, iou_thresh=0.5, confidence_thresh=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, classwise=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, progress=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L757">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L897">
       
       (source)
     </a>
@@ -1253,7 +1329,7 @@ progress callback function to invoke instead</td></tr></table></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">segmentations_to_detections</span><span class="function-signature">(sample_collection, in_field, out_field, mask_targets=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, mask_types=<span class="rst-variable-quote">'</span><span class="rst-variable-string">stuff</span><span class="rst-variable-quote">'</span>, output_dir=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, rel_dir=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, overwrite=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, progress=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L424">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L450">
       
       (source)
     </a>
@@ -1316,7 +1392,7 @@ progress callback function to invoke instead</td></tr></table></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">segmentations_to_polylines</span><span class="function-signature">(sample_collection, in_field, out_field, mask_targets=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, mask_types=<span class="rst-variable-quote">'</span><span class="rst-variable-string">stuff</span><span class="rst-variable-quote">'</span>, tolerance=2, progress=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L582">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L722">
       
       (source)
     </a>
@@ -1370,7 +1446,7 @@ progress callback function to invoke instead</td></tr></table></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">transform_segmentations</span><span class="function-signature">(sample_collection, in_field, targets_map, output_dir=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, rel_dir=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, update=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, update_mask_targets=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, overwrite=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, progress=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L317">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L333">
       
       (source)
     </a>
@@ -1409,6 +1485,33 @@ progress callback function to invoke instead</td></tr></table></div>
 </div><div class="basefunction private">
   
   
+  <a name="fiftyone.utils.labels._get_filepath">
+    
+  </a>
+  <a name="_get_filepath">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_get_filepath</span><span class="function-signature">(sample_or_frame, sample)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L1002">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_get_filepath" title="fiftyone.utils.labels._get_filepath">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
   <a name="fiftyone.utils.labels._perform_nms">
     
   </a>
@@ -1419,7 +1522,7 @@ progress callback function to invoke instead</td></tr></table></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_perform_nms</span><span class="function-signature">(detections, iou_thresh=0.5, confidence_thresh=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, classwise=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L825">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L965">
       
       (source)
     </a>
@@ -1446,7 +1549,7 @@ progress callback function to invoke instead</td></tr></table></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_transform_mask_targets</span><span class="function-signature">(mask_targets, targets_map)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L414">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/utils/labels.py#L440">
       
       (source)
     </a>
@@ -1472,7 +1575,7 @@ progress callback function to invoke instead</td></tr></table></div>
   <div class="container-fluid">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/voxel51/" class="projecthome">FiftyOne</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.11.2 at 2025-03-19 23:40:43.
+    24.11.2 at 2025-03-22 02:44:25.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

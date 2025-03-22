@@ -128,6 +128,16 @@
         
 
         
+            <div class="itemName"><code><a href="fiftyone.server.query.ActiveFields.html" class="internal-link" title="fiftyone.server.query.ActiveFields"><wbr></wbr>Active<wbr></wbr>Fields</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="fiftyone.server.query.AppConfig.html" class="internal-link" title="fiftyone.server.query.AppConfig"><wbr></wbr>App<wbr></wbr>Config</a></code>
             </div>
         
@@ -820,10 +830,15 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id1317">
+          <table class="children sortable" id="id1332">
   
   
   <tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.server.query.ActiveFields.html" class="internal-link" title="fiftyone.server.query.ActiveFields"><wbr></wbr>Active<wbr></wbr>Fields</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
     
     <td>Class</td>
     <td><code><a href="fiftyone.server.query.AppConfig.html" class="internal-link" title="fiftyone.server.query.AppConfig"><wbr></wbr>App<wbr></wbr>Config</a></code></td>
@@ -989,7 +1004,7 @@
     
     
     <span class="py-keyword">async def</span> <span class="py-defname">serialize_dataset</span><span class="function-signature">(dataset_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, serialized_view: <code><a href="fiftyone.server.scalars.html#BSONArray" class="internal-link" title="fiftyone.server.scalars.BSONArray">BSONArray</a></code>, saved_view_slug: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a> | <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, dicts=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, update_last_loaded_at=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>) -&gt; <code><a href="fiftyone.server.query.Dataset.html" class="internal-link" title="fiftyone.server.query.Dataset">Dataset</a></code></span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/server/query.py#L578">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/server/query.py#L582">
       
       (source)
     </a>
@@ -1097,7 +1112,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">dataset_dataloader</span> =
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/server/query.py#L351">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/server/query.py#L355">
       
       (source)
     </a>
@@ -1125,7 +1140,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_assign_estimated_counts</span><span class="function-signature">(dataset: <code><a href="fiftyone.server.query.Dataset.html" class="internal-link" title="fiftyone.server.query.Dataset">Dataset</a></code>, fo_dataset: <code><a href="fiftyone.core.dataset.Dataset.html" class="internal-link" title="fiftyone.core.dataset.Dataset">fo.Dataset</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/server/query.py#L678">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/server/query.py#L690">
       
       (source)
     </a>
@@ -1152,7 +1167,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_assign_lightning_info</span><span class="function-signature">(dataset: <code><a href="fiftyone.server.query.Dataset.html" class="internal-link" title="fiftyone.server.query.Dataset">Dataset</a></code>, fo_dataset: <code><a href="fiftyone.core.dataset.Dataset.html" class="internal-link" title="fiftyone.core.dataset.Dataset">fo.Dataset</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/server/query.py#L695">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/server/query.py#L707">
       
       (source)
     </a>
@@ -1179,7 +1194,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_convert_targets</span><span class="function-signature">(targets: <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>[<wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a>, <wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a>]</code>) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="fiftyone.server.query.Target.html" class="internal-link" title="fiftyone.server.query.Target">Target</a>]</code></span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/server/query.py#L574">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/server/query.py#L578">
       
       (source)
     </a>
@@ -1206,7 +1221,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_flatten_fields</span><span class="function-signature">(path: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a>]</code>, fields: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>]</code>) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>]</code></span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/server/query.py#L551">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/server/query.py#L555">
       
       (source)
     </a>
@@ -1232,7 +1247,7 @@
   <div class="container-fluid">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/voxel51/" class="projecthome">FiftyOne</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.11.2 at 2025-03-19 23:40:43.
+    24.11.2 at 2025-03-22 02:44:25.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

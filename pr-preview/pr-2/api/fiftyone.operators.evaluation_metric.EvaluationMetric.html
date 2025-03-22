@@ -161,16 +161,6 @@
         
 
         
-            <div class="itemName"><code><a href="#get_parameters" class="internal-link" title="fiftyone.operators.evaluation_metric.EvaluationMetric.get_parameters">get<wbr></wbr>_parameters</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
             <div class="itemName"><code><a href="#parse_parameters" class="internal-link" title="fiftyone.operators.evaluation_metric.EvaluationMetric.parse_parameters">parse<wbr></wbr>_parameters</a></code>
             </div>
         
@@ -182,6 +172,16 @@
 
         
             <div class="itemName"><code><a href="#rename" class="internal-link" title="fiftyone.operators.evaluation_metric.EvaluationMetric.rename">rename</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#resolve_input" class="internal-link" title="fiftyone.operators.evaluation_metric.EvaluationMetric.resolve_input">resolve<wbr></wbr>_input</a></code>
             </div>
         
 
@@ -248,16 +248,6 @@
 
         
             <div class="itemName"><code><a href="fiftyone.operators.operator.Operator.html#resolve_execution_options" class="internal-link" title="fiftyone.operators.operator.Operator.resolve_execution_options">resolve<wbr></wbr>_execution<wbr></wbr>_options</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="fiftyone.operators.operator.Operator.html#resolve_input" class="internal-link" title="fiftyone.operators.operator.Operator.resolve_input">resolve<wbr></wbr>_input</a></code>
             </div>
         
 
@@ -474,7 +464,7 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id931">
+          <table class="children sortable" id="id946">
   
   
   <tr class="method">
@@ -495,11 +485,6 @@
   </tr><tr class="method">
     
     <td>Method</td>
-    <td><code><a href="#get_parameters" class="internal-link" title="fiftyone.operators.evaluation_metric.EvaluationMetric.get_parameters">get<wbr></wbr>_parameters</a></code></td>
-    <td>Defines any necessary properties to collect this evaluation metric's parameters from a user during prompting.</td>
-  </tr><tr class="method">
-    
-    <td>Method</td>
     <td><code><a href="#parse_parameters" class="internal-link" title="fiftyone.operators.evaluation_metric.EvaluationMetric.parse_parameters">parse<wbr></wbr>_parameters</a></code></td>
     <td>Performs any necessary execution-time formatting to this evaluation metric's parameters.</td>
   </tr><tr class="method">
@@ -507,13 +492,18 @@
     <td>Method</td>
     <td><code><a href="#rename" class="internal-link" title="fiftyone.operators.evaluation_metric.EvaluationMetric.rename">rename</a></code></td>
     <td>Performs any necessary operations required to rename this evaluation metric's key.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#resolve_input" class="internal-link" title="fiftyone.operators.evaluation_metric.EvaluationMetric.resolve_input">resolve<wbr></wbr>_input</a></code></td>
+    <td>Defines any necessary properties to collect this evaluation metric's parameters from a user during prompting.</td>
   </tr>
 </table>
           
             <p class="inheritedFrom">
               Inherited from <code><a href="fiftyone.operators.operator.Operator.html" class="internal-link" title="fiftyone.operators.operator.Operator">Operator</a></code>:
             </p>
-            <table class="children sortable" id="id932">
+            <table class="children sortable" id="id947">
   
   
   <tr class="basemethod">
@@ -546,11 +536,6 @@
     <td>Method</td>
     <td><code><a href="fiftyone.operators.operator.Operator.html#resolve_execution_options" class="internal-link" title="fiftyone.operators.operator.Operator.resolve_execution_options">resolve<wbr></wbr>_execution<wbr></wbr>_options</a></code></td>
     <td>Returns the resolved execution options.</td>
-  </tr><tr class="basemethod">
-    
-    <td>Method</td>
-    <td><code><a href="fiftyone.operators.operator.Operator.html#resolve_input" class="internal-link" title="fiftyone.operators.operator.Operator.resolve_input">resolve<wbr></wbr>_input</a></code></td>
-    <td>Returns the resolved input property.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
@@ -627,7 +612,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">cleanup</span><span class="function-signature">(self, samples, config, eval_key)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/evaluation_metric.py#L116">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/evaluation_metric.py#L118">
       
       (source)
     </a>
@@ -655,7 +640,7 @@ from the collection.</p><table class="fieldTable"><tr class="fieldStart"><td cla
     
     
     <span class="py-keyword">def</span> <span class="py-defname">compute</span><span class="function-signature">(self, samples, results, **kwargs)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/evaluation_metric.py#L68">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/evaluation_metric.py#L70">
       
       (source)
     </a>
@@ -682,7 +667,7 @@ from the collection.</p><table class="fieldTable"><tr class="fieldStart"><td cla
     
     
     <span class="py-keyword">def</span> <span class="py-defname">get_fields</span><span class="function-signature">(self, samples, config, eval_key)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/evaluation_metric.py#L81">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/evaluation_metric.py#L83">
       
       (source)
     </a>
@@ -700,34 +685,6 @@ the given key, if any.</p><table class="fieldTable"><tr class="fieldStart"><td c
 </div><div class="basemethod">
   
   
-  <a name="fiftyone.operators.evaluation_metric.EvaluationMetric.get_parameters">
-    
-  </a>
-  <a name="get_parameters">
-    
-  </a>
-  <div class="functionHeader">
-    
-    
-    <span class="py-keyword">def</span> <span class="py-defname">get_parameters</span><span class="function-signature">(self, ctx, inputs)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/evaluation_metric.py#L48">
-      
-      (source)
-    </a>
-    <a class="headerLink" href="#get_parameters" title="fiftyone.operators.evaluation_metric.EvaluationMetric.get_parameters">
-      
-      
-      ¶
-    </a>
-  </div>
-  <div class="docstring functionBody">
-    
-    <div><p>Defines any necessary properties to collect this evaluation metric's
-parameters from a user during prompting.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ctx</span></td><td class="fieldArgDesc">an <code><a href="fiftyone.operators.executor.ExecutionContext.html" class="internal-link" title="fiftyone.operators.executor.ExecutionContext">fiftyone.operators.ExecutionContext</a></code></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">inputs</span></td><td class="fieldArgDesc">a <code><a href="fiftyone.operators.types.Property.html" class="internal-link">fiftyone.operators.types.Property</a></code></td></tr></table></div>
-  </div>
-</div><div class="basemethod">
-  
-  
   <a name="fiftyone.operators.evaluation_metric.EvaluationMetric.parse_parameters">
     
   </a>
@@ -738,7 +695,7 @@ parameters from a user during prompting.</p><table class="fieldTable"><tr class=
     
     
     <span class="py-keyword">def</span> <span class="py-defname">parse_parameters</span><span class="function-signature">(self, ctx, params)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/evaluation_metric.py#L58">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/evaluation_metric.py#L60">
       
       (source)
     </a>
@@ -766,7 +723,7 @@ metric's parameters.</p><table class="fieldTable"><tr class="fieldStart"><td cla
     
     
     <span class="py-keyword">def</span> <span class="py-defname">rename</span><span class="function-signature">(self, samples, config, eval_key, new_eval_key)</span>:
-    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/evaluation_metric.py#L95">
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/evaluation_metric.py#L97">
       
       (source)
     </a>
@@ -781,6 +738,34 @@ metric's parameters.</p><table class="fieldTable"><tr class="fieldStart"><td cla
     <div><p>Performs any necessary operations required to rename this evaluation
 metric's key.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">samples</span></td><td class="fieldArgDesc">a <code><a href="fiftyone.core.collections.SampleCollection.html" class="internal-link">fiftyone.core.collections.SampleCollection</a></code></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">config</span></td><td class="fieldArgDesc">an <code><a href="fiftyone.core.evaluation.EvaluationMethodConfig.html" class="internal-link">fiftyone.core.evaluation.EvaluationMethodConfig</a></code></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">eval<wbr></wbr>_key</span></td><td class="fieldArgDesc">an evaluation key</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">new<wbr></wbr>_eval<wbr></wbr>_key</span></td><td class="fieldArgDesc">a new evaluation key</td></tr></table></div>
   </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.evaluation_metric.EvaluationMetric.resolve_input">
+    
+  </a>
+  <a name="resolve_input">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">resolve_input</span><span class="function-signature">(self, ctx)</span>:
+    <a class="sourceLink" href="https://github.com/voxel51/fiftyone/tree/v1.3.0/fiftyone/operators/evaluation_metric.py#L48">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#resolve_input" title="fiftyone.operators.evaluation_metric.EvaluationMetric.resolve_input">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fiftyone.operators.operator.Operator.html#resolve_input" class="internal-link">fiftyone.operators.operator.Operator.resolve_input</a></code></div>
+    <div><p>Defines any necessary properties to collect this evaluation metric's
+parameters from a user during prompting.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ctx</span></td><td class="fieldArgDesc">an <code><a href="fiftyone.operators.executor.ExecutionContext.html" class="internal-link" title="fiftyone.operators.executor.ExecutionContext">fiftyone.operators.ExecutionContext</a></code></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">a <code><a href="fiftyone.operators.types.Property.html" class="internal-link">fiftyone.operators.types.Property</a></code>, or None</td></tr></table></div>
+  </div>
 </div>
         </div>
       
@@ -793,7 +778,7 @@ metric's key.</p><table class="fieldTable"><tr class="fieldStart"><td class="fie
   <div class="container-fluid">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/voxel51/" class="projecthome">FiftyOne</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.11.2 at 2025-03-19 23:40:43.
+    24.11.2 at 2025-03-22 02:44:25.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 
