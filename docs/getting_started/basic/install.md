@@ -1,9 +1,15 @@
+---
+keywords: >-
+  install, installation, setup, get started, configuration, python, start,
+  quickstart, upgrade, downgrade, migrate
+---
+
 # FiftyOne Installation [¶](\#fiftyone-installation "Permalink to this headline")
 
-Note
+!!! success "FiftyOne Teams"
 
-Need to collaborate on your datasets? Check out
-[FiftyOne Teams](../../teams/index.md#fiftyone-teams)!
+    Need to collaborate on your datasets? Check out
+    [FiftyOne Teams](../../teams/index.md#fiftyone-teams)!
 
 ## Prerequisites [¶](\#prerequisites "Permalink to this headline")
 
@@ -23,20 +29,27 @@ We encourage installing FiftyOne in a virtual environment. See
 To install FiftyOne, ensure you have activated any virtual environment that you
 are using, then run:
 
-```python
-pip install fiftyone
+!!! example
 
-```
+    === "pip"
+
+        ```shell
+        pip install fiftyone
+
+        ```
+
+    === "uv"
+
+        ```shell
+        uv pip install fiftyone
+        ```
 
 This will install FiftyOne and all of its dependencies. Once this has
 completed, you can verify that FiftyOne is installed in your virtual
 environment by importing the `fiftyone` package:
 
 ```python
-$ python
->>>
->>> import fiftyone as fo
->>>
+import fiftyone as fo
 
 ```
 
@@ -77,38 +90,51 @@ Note
 Most installation issues can be fixed by upgrading some packages and then
 rerunning the FiftyOne install:
 
-```python
-pip install --upgrade pip setuptools wheel build
-pip install fiftyone
+!!! example
 
-```
+    === "pip"
 
-**Mac users:**
+        ```shell
+        pip install --upgrade pip setuptools wheel build
+        pip install fiftyone
 
-- You must have the
-[XCode Command Line Tools](https://developer.apple.com/library/archive/technotes/tn2339/_index.html)
-package installed on your machine. You likely already have it, but if you
-encounter an error message like
-`error: command 'clang' failed with exit status 1`, then you may need to
-install it via `xcode-select --install`, or see
-[this page](https://stackoverflow.com/q/9329243) for other options.
+        ```
 
-**Linux users:**
+    === "uv"
 
-- The `psutil` package may require Python headers to be installed on your
-system. On Debian-based distributions, these are available in the
-`python3-dev` package.
+        ```shell
+        uv pip install -U pip setuptools wheel build
+        uv pip install fiftyone
+        ```
 
-- If you encounter an error related to MongoDB failing to start, such as `Could
-not find mongod`, you may need to install additional packages. See the
-[alternative Linux builds](troubleshooting.md#troubleshooting-mongodb) for details.
+!!! note
 
-**Windows users:**
+    === "MacOS"
 
-- If you encounter a `psutil.NoSuchProcessExists` when importing `fiftyone`,
-you will need to install the 64-bit Visual Studio 2015 C++ redistributable
-library. See [here](troubleshooting.md#troubleshooting-mongodb-windows) for
-instructions.
+        You must have the
+        [XCode Command Line Tools](https://developer.apple.com/library/archive/technotes/tn2339/_index.html)
+        package installed on your machine. You likely already have it, but if you
+        encounter an error message like
+        `error: command 'clang' failed with exit status 1`, then you may need to
+        install it via `xcode-select --install`, or see
+        [this page](https://stackoverflow.com/q/9329243) for other options.
+
+    === "Linux"
+
+        - The `psutil` package may require Python headers to be installed on your
+        system. On Debian-based distributions, these are available in the
+        `python3-dev` package.
+
+        - If you encounter an error related to MongoDB failing to start, such as `Could
+        not find mongod`, you may need to install additional packages. See the
+        [alternative Linux builds](troubleshooting.md#troubleshooting-mongodb) for details.
+
+    === "Windows"
+
+        If you encounter a `psutil.NoSuchProcessExists` when importing `fiftyone`,
+        you will need to install the 64-bit Visual Studio 2015 C++ redistributable
+        library. See [here](troubleshooting.md#troubleshooting-mongodb-windows) for
+        instructions.
 
 ## Installing extras [¶](\#installing-extras "Permalink to this headline")
 
@@ -119,7 +145,7 @@ preemptively install what you’ll need by installing the following additional
 packages via `pip` in your virtual environment:
 
 - `ipython` to follow along with interactive examples more easily (note that
-a system-wide IPython installation will _not_ work in a virtual environment,
+a system-wide IPython installation will **_not_** work in a virtual environment,
 even if it is accessible)
 
 - `torch` and `torchvision` for examples requiring PyTorch. The installation
@@ -139,35 +165,44 @@ instructions.
 FiftyOne. See [this page](troubleshooting.md#troubleshooting-video) for installation
 instructions.
 
-Note
+!!! note
 
-FiftyOne does not strictly require any of these packages, so you can install
-only what you need. If you run something that requires an additional package,
-you will see a helpful message telling you what to install.
+    FiftyOne does not strictly require any of these packages, so you can install
+    only what you need. If you run something that requires an additional package,
+    you will see a helpful message telling you what to install.
 
 ## Upgrading FiftyOne [¶](\#upgrading-fiftyone "Permalink to this headline")
 
 You can upgrade an existing FiftyOne installation by passing the `--upgrade`
 option to `pip install`:
 
-```python
-pip install --upgrade fiftyone
+!!! example
 
-```
+    === "pip"
 
-Note
+        ```shell
+        pip install --upgrade fiftyone
 
+        ```
+
+    === "uv"
+
+        ```shell
+        uv pip --upgrade fiftyone
+        ```
+
+**Note:**
 New versions of FiftyOne occasionally introduce data model changes that
 require database migrations after you upgrade. Rest assured, these migrations
 will be **automatically** performed on a per-dataset basis whenever you load
 a dataset for the first time in a newer version of FiftyOne.
 
-Note
+!!! tip
 
-If you are working with a
-[custom/shared MongoDB database](../../fiftyone_concepts/config.md#configuring-mongodb-connection), you
-can use [database admin privileges](../../fiftyone_concepts/config.md#database-migrations) to control
-which clients are allowed to upgrade your FiftyOne deployment.
+    If you are working with a
+    [custom/shared MongoDB database](../../fiftyone_concepts/config.md#configuring-mongodb-connection), you
+    can use [database admin privileges](../../fiftyone_concepts/config.md#database-migrations) to control
+    which clients are allowed to upgrade your FiftyOne deployment.
 
 ## Downgrading FiftyOne [¶](\#downgrading-fiftyone "Permalink to this headline")
 
@@ -204,12 +239,12 @@ reinstall the newer version of FiftyOne and then follow these instructions.
 See [this page](troubleshooting.md#troubleshooting-downgrades) if you need to install
 FiftyOne v0.7.3 or earlier.
 
-Note
+!!! tip
 
-If you are working with a
-[custom/shared MongoDB database](../../fiftyone_concepts/config.md#configuring-mongodb-connection), you
-can use [database admin privileges](../../fiftyone_concepts/config.md#database-migrations) to control
-which clients are allowed to downgrade your FiftyOne deployment.
+    If you are working with a
+    [custom/shared MongoDB database](../../fiftyone_concepts/config.md#configuring-mongodb-connection), you
+    can use [database admin privileges](../../fiftyone_concepts/config.md#database-migrations) to control
+    which clients are allowed to downgrade your FiftyOne deployment.
 
 ## Uninstalling FiftyOne [¶](\#uninstalling-fiftyone "Permalink to this headline")
 
